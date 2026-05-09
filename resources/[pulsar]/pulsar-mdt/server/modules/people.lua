@@ -50,7 +50,7 @@ exports("PeopleView", function(id, requireAllData)
 	local SID = tonumber(id)
 
 	local character = MySQL.single.await(
-		"SELECT SID, User, First, Last, Gender, Origin, Jobs, DOB, Callsign, Phone, Licenses, Qualifications, Flags, MDTSystemAdmin, MDTHistory, Attorney, LastClockOn, TimeClockedOn FROM characters WHERE SID = ? AND (Deleted = 0 OR Deleted IS NULL)",
+		"SELECT SID, User, First, Last, Gender, Origin, Jobs, DOB, Callsign, Phone, Licenses, Qualifications, Flags, MDTSystemAdmin, MDTHistory, MDTSuspension, Attorney, LastClockOn, TimeClockedOn FROM characters WHERE SID = ? AND (Deleted = 0 OR Deleted IS NULL)",
 		{ SID }
 	)
 
@@ -84,6 +84,9 @@ exports("PeopleView", function(id, requireAllData)
 	end
 	if character.MDTHistory then
 		character.MDTHistory = json.decode(character.MDTHistory)
+	end
+	if character.MDTSuspension then
+		character.MDTSuspension = json.decode(character.MDTSuspension)
 	end
 	if character.LastClockOn then
 		character.LastClockOn = json.decode(character.LastClockOn)

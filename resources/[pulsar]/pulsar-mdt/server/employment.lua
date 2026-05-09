@@ -207,158 +207,166 @@ AddEventHandler("MDT:Server:RegisterCallbacks", function()
 		end
 	end)
 
-	exports["pulsar-core"]:RegisterServerCallback("MDT:Suspend", function(source, data, cb)
-		local char = exports['pulsar-characters']:FetchCharacterSource(source)
-
-		local isSystemAdmin = char:GetData('MDTSystemAdmin')
-		local hasPerms, loggedInJob = CheckMDTPermissions(source, {
-			'MDT_FIRE',
-			'PD_HIGH_COMMAND',
-			'DOC_HIGH_COMMAND',
-		}, data.JobId)
-
-		if char and data and data.SID and (hasPerms or isSystemAdmin) then
-			local charData = exports['pulsar-mdt']:PeopleView(data.SID)
-			if charData then
-				local canRemove = false
-				if isSystemAdmin then
-					canRemove = true
-				else
-					local plyrJob = exports['pulsar-jobs']:HasJob(source, loggedInJob)
-					for k, v in ipairs(charData.Jobs) do
-						if v.Id == data.JobId then
-							if plyrJob.Grade.Level > v.Grade.Level then
-								canRemove = true
-							end
-							break
-						end
-					end
-				end
-
-				if canRemove and data.Length and type(data.Length) == "number" and data.Length > 0 and data.Length < 99 then
-					local suspendData = {
-						Actioned = {
-							First = char:GetData("First"),
-							Last = char:GetData("Last"),
-							SID = char:GetData("SID"),
-							Callsign = char:GetData("Callsign")
-						},
-						Length = data.Length,
-						Expires = os.time() + (60 * 60 * 24 * data.Length),
-					}
-
-					local currentData = MySQL.single.await(
-						'SELECT MDTHistory, MDTSuspension FROM characters WHERE SID = ?', { data.SID })
-					local history = currentData and json.decode(currentData.MDTHistory) or {}
-					local suspension = currentData and json.decode(currentData.MDTSuspension) or {}
-
-					table.insert(history, {
-						Time = (os.time() * 1000),
-						Char = char:GetData("SID"),
-						Log = string.format(
-							"%s Suspended Them From Job %s for %s Days",
-							char:GetData("First") .. " " .. char:GetData("Last"),
-							data.JobId,
-							data.Length
-						),
-					})
-
-					suspension[data.JobId] = suspendData
-
-					MySQL.update.await('UPDATE characters SET MDTHistory = ?, MDTSuspension = ? WHERE SID = ?', {
-						json.encode(history),
-						json.encode(suspension),
-						data.SID
-					}, function(success, results)
-						if success then
-							local char = exports['pulsar-characters']:FetchBySID(data.SID)
-							if char then
-								char:SetData("MDTSuspension", suspension)
-								exports['pulsar-jobs']:DutyOff(char:GetData("Source"), data.JobId)
-							end
-
-							cb(true)
-						else
-							cb(false)
-						end
-					end)
-				else
-					cb(false)
-				end
-			end
-		else
-			cb(false)
-		end
-	end)
-
-	exports["pulsar-core"]:RegisterServerCallback("MDT:Unsuspend", function(source, data, cb)
-		local char = exports['pulsar-characters']:FetchCharacterSource(source)
-
-		local isSystemAdmin = char:GetData('MDTSystemAdmin')
-		local hasPerms, loggedInJob = CheckMDTPermissions(source, {
-			'MDT_FIRE',
-			'PD_HIGH_COMMAND',
-			'DOC_HIGH_COMMAND',
-		}, data.JobId)
-
-		if char and data and data.SID and (hasPerms or isSystemAdmin) then
-			local charData = exports['pulsar-mdt']:PeopleView(data.SID)
-			if charData then
-				local canRemove = false
-				if isSystemAdmin then
-					canRemove = true
-				else
-					local plyrJob = exports['pulsar-jobs']:HasJob(source, loggedInJob)
-					for k, v in ipairs(charData.Jobs) do
-						if v.Id == data.JobId then
-							if plyrJob.Grade.Level > v.Grade.Level then
-								canRemove = true
-							end
-							break
-						end
-					end
-				end
-
-				if canRemove then
-					local currentData = MySQL.single.await(
-						'SELECT MDTHistory, MDTSuspension FROM characters WHERE SID = ?', { data.SID })
-					local history = currentData and json.decode(currentData.MDTHistory) or {}
-					local suspension = currentData and json.decode(currentData.MDTSuspension) or {}
-
-					table.insert(history, {
-						Time = (os.time() * 1000),
-						Char = char:GetData("SID"),
-						Log = string.format(
-							"%s Revoked Suspension From Job %s",
-							char:GetData("First") .. " " .. char:GetData("Last"),
-							data.JobId
-						),
-					})
-
-					suspension[data.JobId] = nil
-
-					MySQL.update.await('UPDATE characters SET MDTHistory = ?, MDTSuspension = ? WHERE SID = ?', {
-						json.encode(history),
-						json.encode(suspension),
-						data.SID
-					}, function(success, results)
-						if success then
-							local char = exports['pulsar-characters']:FetchBySID(data.SID)
-							if char then
-								char:SetData("MDTSuspension", suspension)
-							end
-
-							cb(true)
-						else
-							cb(false)
-						end
-					end)
-				else
-					cb(false)
-				end
-			end
-		else
-			cb(false)
-		end
-	end)
+    exports["pulsar-core"]:RegisterServerCallback("MDT:Suspend", function(source, data, cb)
+        local char = exports['pulsar-characters']:FetchCharacterSource(source)
+        local isSystemAdmin = char:GetData('MDTSystemAdmin')
+    
+        local hasPerms, loggedInJob = CheckMDTPermissions(source, {
+            'MDT_FIRE',
+            'PD_HIGH_COMMAND',
+            'DOC_HIGH_COMMAND',
+        }, data.JobId)
+    
+        if char and data and data.SID and (hasPerms or isSystemAdmin) then
+            local charData = exports['pulsar-mdt']:PeopleView(data.SID)
+        
+            if charData then
+                local canRemove = false
+                if isSystemAdmin then
+                    canRemove = true
+                else
+                    local plyrJob = exports['pulsar-jobs']:HasJob(source, loggedInJob)
+                
+                    for k, v in ipairs(charData.Jobs) do
+                        if v.Id == data.JobId then
+                            if plyrJob.Grade.Level >= v.Grade.Level then
+                                canRemove = true
+                            end
+                            break
+                        end
+                    end
+                end
+            
+                if canRemove and data.Length and type(data.Length) == "number" and data.Length > 0 and data.Length < 99 then
+                    local suspendData = {
+                        Actioned = {
+                            First = char:GetData("First"),
+                            Last = char:GetData("Last"),
+                            SID = char:GetData("SID"),
+                            Callsign = char:GetData("Callsign")
+                        },
+                        Length = data.Length,
+                        Expires = os.time() + (60 * 60 * 24 * data.Length),
+                    }
+                
+                    local currentData = MySQL.single.await(
+                        'SELECT MDTHistory, MDTSuspension FROM characters WHERE SID = ?', { data.SID })
+                
+                    local history = (currentData and type(currentData.MDTHistory) == "string" and json.decode(currentData.MDTHistory)) or {}
+                    local suspension = (currentData and type(currentData.MDTSuspension) == "string" and json.decode(currentData.MDTSuspension)) or {}
+                
+                    table.insert(history, {
+                        Time = (os.time() * 1000),
+                        Char = char:GetData("SID"),
+                        Log = string.format(
+                            "%s Suspended Them From Job %s for %s Days",
+                            char:GetData("First") .. " " .. char:GetData("Last"),
+                            data.JobId,
+                            data.Length
+                        ),
+                    })
+                
+                    suspension[data.JobId] = suspendData
+                
+                    local success = MySQL.update.await('UPDATE characters SET MDTHistory = ?, MDTSuspension = ? WHERE SID = ?', {
+                        json.encode(history),
+                        json.encode(suspension),
+                        data.SID
+                    })
+                
+                    if success then
+                        local targetChar = exports['pulsar-characters']:FetchBySID(data.SID)
+                        if targetChar then
+                            targetChar:SetData("MDTSuspension", suspension)
+                            exports['pulsar-jobs']:DutyOff(targetChar:GetData("Source"), data.JobId)
+                        end
+                        cb(true)
+                    else
+                        cb(false)
+                    end
+                else
+                    cb(false)
+                end
+            else
+                cb(false)
+            end
+        else
+            cb(false)
+        end
+    end)
+    
+    exports["pulsar-core"]:RegisterServerCallback("MDT:Unsuspend", function(source, data, cb)
+        local char = exports['pulsar-characters']:FetchCharacterSource(source)
+        local isSystemAdmin = char:GetData('MDTSystemAdmin')
+    
+        local hasPerms, loggedInJob = CheckMDTPermissions(source, {
+            'MDT_FIRE',
+            'PD_HIGH_COMMAND',
+            'DOC_HIGH_COMMAND',
+        }, data.JobId)
+    
+        if char and data and data.SID and (hasPerms or isSystemAdmin) then
+            local charData = exports['pulsar-mdt']:PeopleView(data.SID)
+        
+            if charData then
+                local canRemove = false
+                if isSystemAdmin then
+                    canRemove = true
+                else
+                    local plyrJob = exports['pulsar-jobs']:HasJob(source, loggedInJob)
+                
+                    for k, v in ipairs(charData.Jobs) do
+                        if v.Id == data.JobId then
+                            if plyrJob.Grade.Level >= v.Grade.Level then
+                                canRemove = true
+                            end
+                            break
+                        end
+                    end
+                end
+            
+                if canRemove then
+                    local currentData = MySQL.single.await(
+                        'SELECT MDTHistory, MDTSuspension FROM characters WHERE SID = ?', { data.SID })
+                
+                    local history = (currentData and type(currentData.MDTHistory) == "string" and json.decode(currentData.MDTHistory)) or {}
+                    local suspension = (currentData and type(currentData.MDTSuspension) == "string" and json.decode(currentData.MDTSuspension)) or {}
+                
+                    table.insert(history, {
+                        Time = (os.time() * 1000),
+                        Char = char:GetData("SID"),
+                        Log = string.format(
+                            "%s Revoked Suspension From Job %s",
+                            char:GetData("First") .. " " .. char:GetData("Last"),
+                            data.JobId
+                        ),
+                    })
+                
+                    suspension[data.JobId] = nil
+                
+                    local success = MySQL.update.await('UPDATE characters SET MDTHistory = ?, MDTSuspension = ? WHERE SID = ?', {
+                        json.encode(history),
+                        json.encode(suspension),
+                        data.SID
+                    })
+                
+                    if success then
+                        local targetChar = exports['pulsar-characters']:FetchBySID(data.SID)
+                        if targetChar then
+                            targetChar:SetData("MDTSuspension", suspension)
+                        end
+                        cb(true)
+                    else
+                        cb(false)
+                    end
+                else
+                    cb(false)
+                end
+            else
+                cb(false)
+            end
+        else
+            cb(false)
+        end
+    end)
 end)

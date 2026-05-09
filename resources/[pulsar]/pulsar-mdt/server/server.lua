@@ -26,7 +26,7 @@ AddEventHandler('onResourceStart', function(resource)
 		Wait(1000)
 		RegisterMiddleware()
 		Startup()
-    exports['pulsar-core']:VersionCheck('PulsarFW/pulsar-mdt')
+		exports['pulsar-core']:VersionCheck('PulsarFW/pulsar-mdt')
 		TriggerEvent("MDT:Server:RegisterCallbacks")
 
 		Wait(2500)
@@ -467,6 +467,10 @@ AddEventHandler("MDT:Server:RegisterCallbacks", function()
 					elseif type(character.Qualifications) ~= "table" then
 						character.Qualifications = {}
 					end
+				end
+
+				if character.MDTSuspension then
+					character.MDTSuspension = json.decode(character.MDTSuspension)
 				end
 
 				for _, job in ipairs(jobs) do

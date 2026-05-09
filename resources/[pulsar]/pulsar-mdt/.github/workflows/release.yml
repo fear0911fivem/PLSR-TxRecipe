@@ -1,0 +1,73 @@
+name: Create release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Bump manifest version
+        run: node .github/actions/bump-manifest-version.js
+        env:
+          TGT_RELEASE_VERSION: ${{ github.ref_name }}
+
+      - name: Push version bump change
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: '["fxmanifest.lua"]'
+          push: true
+          default_author: github_actions
+          message: "chore: bump version to ${{ github.ref_name }}"
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+        working-directory: ui
+
+      - name: Build UI
+        run: npm run build
+        working-directory: ui
+
+      - name: Bundle files
+        run: |
+          mkdir -p staging/pulsar-mdt
+          rsync -a --exclude='.github' --exclude='node_modules' --exclude='staging' . staging/pulsar-mdt/
+          cd staging && zip -r ../pulsar-mdt.zip pulsar-mdt/
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "PULSAR-MDT ${{ github.ref_name }}"
+          body: |
+            ![Pulsar Framework](https://r2.fivemanage.com/GPYOH8Hq4GPyAY7czrgLe/pulsarbanner.png)
+
+            ## PULSAR-MDT ${{ github.ref_name }}
+
+            Police and emergency services mobile data terminal for Pulsar Framework.
+
+            ### Installation
+            1. Download `pulsar-mdt.zip` below
+            2. Extract into your server's `resources` folder
+            3. Add `ensure pulsar-mdt` to your `server.cfg`
+
+            ---
+            ![Pulsar Framework](https://img.shields.io/badge/Pulsar-Framework-7c3aed?style=flat-square)
+            ![Built for FiveM](https://img.shields.io/badge/Built_for-FiveM-F40552?style=flat-square)
+          files: pulsar-mdt.zip
+          prerelease: false

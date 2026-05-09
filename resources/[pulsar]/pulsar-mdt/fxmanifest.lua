@@ -1,7 +1,7 @@
 name("Pulsar Framework MDT")
 description("Mobile Data Terminal Written For Pulsar Framework")
 author("Dr Nick")
-version "1.0.2"
+version "1.0.3"
 lua54("yes")
 fx_version("cerulean")
 game("gta5")
