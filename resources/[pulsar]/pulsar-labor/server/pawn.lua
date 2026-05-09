@@ -1,0 +1,131 @@
+local _pawnPricing = {
+	[0] = 10,
+	[1] = 20,
+	[2] = 30,
+	[3] = 40,
+	[4] = 50,
+	[5] = 60,
+}
+
+local _pawnItems = {
+	["jewelry"] = {
+		{
+			item = "rolex",
+			rep = 15,
+		},
+		{
+			item = "ring",
+			rep = 10,
+		},
+		{
+			item = "chain",
+			rep = 10,
+		},
+		{
+			item = "watch",
+			rep = 10,
+		},
+		{
+			item = "earrings",
+			rep = 10,
+		},
+		{
+			item = "goldcoins",
+			rep = 5,
+		},
+	},
+	["valuegoods"] = {
+		{
+			item = "valuegoods",
+			rep = 30,
+		},
+	},
+	["electronics"] = {
+		{
+			item = "tv",
+			rep = 30,
+		},
+		{
+			item = "big_tv",
+			rep = 80,
+		},
+		{
+			item = "boombox",
+			rep = 20,
+		},
+		{
+			item = "pc",
+			rep = 50,
+		},
+	},
+	["appliance"] = {
+		{
+			item = "microwave",
+			rep = 25,
+		},
+	},
+	["golf"] = {
+		{
+			item = "golfclubs",
+			rep = 40,
+		},
+	},
+	["art"] = {
+		{
+			item = "house_art",
+			rep = 50,
+		},
+	},
+	["raremetals"] = {
+		{
+			item = "goldbar",
+			rep = 25,
+		},
+		{
+			item = "silverbar",
+			rep = 15,
+		},
+	},
+}
+
+AddEventHandler("Labor:Server:Startup", function()
+	exports['pulsar-characters']:RepCreate("Pawn", "Pawn Shop", {
+		{ label = "Rank 1", value = 5000 },
+		{ label = "Rank 2", value = 10000 },
+		{ label = "Rank 3", value = 20000 },
+		{ label = "Rank 4", value = 30000 },
+		{ label = "Rank 5", value = 40000 },
+	})
+
+	exports["pulsar-core"]:RegisterServerCallback("Pawn:Sell", function(source, data, cb)
+		local char = exports['pulsar-characters']:FetchCharacterSource(source)
+		if char then
+			local pawning = _pawnItems[data]
+			if pawning then
+				local repLvl = exports['pulsar-characters']:RepGetLevel(source, "Pawn")
+
+				local money = 0
+				local earntRep = 0
+
+				for k, v in ipairs(pawning) do
+					local count = exports.ox_inventory:ItemsGetCount(char:GetData("SID"), 1, v.item) or 0
+					if count > 0 then
+						local itemData = exports.ox_inventory:ItemsGetData(v.item)
+
+						if itemData and exports.ox_inventory:Remove(char:GetData("SID"), 1, v.item, count) then
+							money += math.floor(((_pawnPricing[repLvl] / 100) * itemData.price) * count)
+							earntRep += v.rep * count
+						end
+					end
+				end
+
+				if money > 0 then
+					exports['pulsar-finance']:WalletModify(source, money)
+					exports['pulsar-characters']:RepAdd(source, "Pawn", earntRep)
+				else
+					exports['pulsar-hud']:Notification(source, "error", "You Have Nothing To Sell")
+				end
+			end
+		end
+	end)
+end)

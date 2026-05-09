@@ -1,0 +1,8 @@
+AddEventHandler("Phone:Server:RegisterCallbacks", function()
+	exports["pulsar-core"]:RegisterServerCallback("Phone:Media:GetMedia", function(source, data, cb)
+		cb(exports['pulsar-phone']:PhotosFetch(source))
+	end)
+	exports["pulsar-core"]:RegisterServerCallback("Phone:Media:DeleteMedia", function(source, data, cb)
+		cb(exports['pulsar-phone']:PhotosDelete(source, data.id))
+	end)
+end)

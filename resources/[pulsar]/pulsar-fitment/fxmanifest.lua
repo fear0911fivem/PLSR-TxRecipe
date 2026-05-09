@@ -1,0 +1,19 @@
+fx_version("cerulean")
+games({ "gta5" })
+lua54("yes")
+client_script("@pulsar-core/exports/cl_error.lua")
+client_script("@pulsar-pwnzor/client/check.lua")
+
+description("Pulsar Framework Wheel Fitment")
+name("Pulsar Framework: pulsar-fitment")
+author("Dr Nick")
+version "1.0.2"
+
+
+client_scripts({
+  "client/**/*.lua",
+})
+
+server_scripts({
+  "server/**/*.lua",
+})

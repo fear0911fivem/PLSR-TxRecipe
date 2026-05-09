@@ -1,0 +1,15 @@
+/* Scale the entire UI with viewport so 1rem = 16px at 1920px wide, doubles at 4K */
+html { font-size: 0.833vw; color-scheme: normal !important; }
+body { background: transparent !important; }
+
+@keyframes hud-flash {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.1; }
+  100% { opacity: 1; }
+}
+
+@keyframes hud-flash-mild {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.45; }
+  100% { opacity: 1; }
+}

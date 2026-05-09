@@ -1,0 +1,11 @@
+RegisterNUICallback("Media:GetMedia", function(data, cb)
+	exports["pulsar-core"]:ServerCallback("Phone:Media:GetMedia", data, function(mediaData)
+		cb(mediaData)
+	end)
+end)
+
+RegisterNUICallback("Media:DeleteMedia", function(data, cb)
+	exports["pulsar-core"]:ServerCallback("Phone:Media:DeleteMedia", data, function(mediaData)
+		cb(mediaData)
+	end)
+end)

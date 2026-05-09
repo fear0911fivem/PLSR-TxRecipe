@@ -1,0 +1,6 @@
+.idea/
+.vscode/
+*.cfg
+web/node_modules/
+web/build/
+package-lock.json

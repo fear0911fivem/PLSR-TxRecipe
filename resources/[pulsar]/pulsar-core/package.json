@@ -1,0 +1,9 @@
+{
+	"name": "base-wrapper",
+	"version": "1.0.0",
+	"main": "./core/sv_generator.js",
+	"license": "MIT",
+	"dependencies": {
+		"@faker-js/faker": "7.6.0"
+	}
+}

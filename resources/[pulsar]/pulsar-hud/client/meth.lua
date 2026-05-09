@@ -1,0 +1,12 @@
+RegisterNUICallback("Meth:Start", function(data, cb)
+	exports['pulsar-sounds']:UISoundsPlayFrontEnd(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET")
+	TriggerEvent("Drugs:Client:Meth:ConfirmCook", data)
+	exports['pulsar-hud']:MethClose()
+	cb("ok")
+end)
+
+RegisterNUICallback("Meth:Cancel", function(data, cb)
+	exports['pulsar-sounds']:UISoundsPlayFrontEnd(-1, "BACK", "HUD_FRONTEND_DEFAULT_SOUNDSET")
+	exports['pulsar-hud']:MethClose()
+	cb("ok")
+end)

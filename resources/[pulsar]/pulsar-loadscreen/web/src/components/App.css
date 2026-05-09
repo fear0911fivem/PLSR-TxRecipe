@@ -1,0 +1,309 @@
+.loading-screen {
+  --theme-purple-bright: #7c46ff;
+  --theme-purple-main: #5c23e8;
+  --theme-purple-dark: #2a0a66;
+  --theme-purple-soft: #b7a4ff;
+  --theme-text-primary: #f5f0ff;
+  --theme-text-secondary: #d7cafb;
+}
+
+.loading-screen {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  font-family: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+}
+
+.background-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  z-index: 1;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(19, 7, 45, 0.35) 0%, rgba(26, 10, 66, 0.58) 50%, rgba(12, 3, 34, 0.8) 100%);
+  z-index: 2;
+}
+
+.center-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: none;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.bottom-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.logo {
+  max-width: 680px;
+  max-height: 420px;
+  width: min(88vw, 680px);
+  height: auto;
+  margin: 0 auto 52px auto;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+  animation: none;
+  display: block;
+  position: static;
+  z-index: 1;
+  object-position: center;
+  transform: translateX(-52px);
+}
+
+.welcome-text {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeIn 1.5s ease-out;
+  height: 120px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-name {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--theme-text-primary);
+  margin: 0 0 15px 0;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  animation: typing 2s steps(20, end);
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+.welcome-message {
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--theme-text-secondary);
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  animation: typing-welcome 2.5s steps(25, end);
+  animation-delay: 3.5s;
+  animation-fill-mode: both;
+}
+
+.dots {
+  display: inline-block;
+}
+
+.dot {
+  animation: fadeDot 1.5s ease-in-out infinite;
+  opacity: 0;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.loading-info {
+  margin-top: 20px;
+  animation: fadeIn 2s ease-out;
+}
+
+.loading-text {
+  font-size: 20px;
+  color: var(--theme-text-primary);
+  margin: 0;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+  min-height: 30px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 6px;
+  background: rgba(124, 70, 255, 0.2);
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--theme-purple-dark) 0%, var(--theme-purple-bright) 50%, var(--theme-purple-main) 100%);
+  background-size: 200% 100%;
+  transition: width 0.3s ease-out;
+  animation: shimmer 2s linear infinite;
+  box-shadow: 0 0 20px rgba(124, 70, 255, 0.65);
+}
+
+.priority-container {
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+  z-index: 3;
+  animation: fadeIn 2s ease-out;
+}
+
+.priority-section {
+  padding: 16px 20px;
+  background: rgba(28, 9, 71, 0.45);
+  border-radius: 6px;
+  border: 1px solid rgba(183, 164, 255, 0.35);
+  min-width: 200px;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 2px 12px rgba(23, 7, 62, 0.4);
+}
+
+.priority-title {
+  font-size: 16px;
+  color: var(--theme-purple-soft);
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+}
+
+.priority-message {
+  font-size: 14px;
+  color: var(--theme-text-primary);
+  text-align: left;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+
+.stage-display {
+  position: absolute;
+  left: 1%;
+  bottom: 300%;
+  z-index: 3;
+}
+
+.completed-stage {
+  color: var(--theme-text-primary);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.completed-stage::after {
+  color: var(--theme-purple-bright);
+  content: '": COMPLETED,"';
+  margin-right: 24px;
+}
+
+.current-stage {
+  color: var(--theme-text-primary);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.current-stage::after {
+  color: var(--theme-purple-soft);
+  content: '": IN PROGRESS,"';
+  margin-right: 24px;
+}
+
+@keyframes fadeDot {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-welcome {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
