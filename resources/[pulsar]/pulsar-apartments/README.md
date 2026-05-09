@@ -1,50 +1,21 @@
-<div align="center">
+# Pulsar Framework Custom Apartments
 
-<img src="https://r2.fivemanage.com/GPYOH8Hq4GPyAY7czrgLe/pulsarbanner.png" alt="Pulsar Framework" width="100%" />
+Pulsar-native rebuild of the custom Mythic apartment system.
 
-<br/>
+## Current Scope
 
-# PULSAR-APARTMENTS
+- Uses Pulsar exports and callbacks instead of legacy framework components.
+- Stores apartment assignments in HeidiSQL via `apartment_assignments`.
+- Keeps `characters.Apartment` synchronized for Pulsar spawn and police systems.
+- Builds apartment rooms from `shared/config.lua`.
+- Supports room entry, exit, stash, wardrobe, logout, reception assignment, elevators, entry requests, police raid target, and showers.
+- Imports missing `apt_room_*` room doors into `ox_doorlock`.
+- Syncs assigned room owners into `ox_doorlock` by updating each room door's `characters` list.
 
-### Player housing — apartment ownership and interior routing
+## Swap Notes
 
-<br/>
+This folder is intentionally named `Pulsar Framework Custom Apartments` while under development. When ready, stop/remove the stock `pulsar-apartments` resource and rename or move this resource into the live `pulsar-apartments` slot so existing Pulsar resources continue calling `exports['pulsar-apartments']`.
 
-![Lua](https://img.shields.io/badge/Lua_5.4-2C2D72?style=flat-square&logo=lua&logoColor=white)
-![FiveM](https://img.shields.io/badge/FiveM-F40552?style=flat-square)
-![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white)
+The SQL table is auto-created on resource start. The matching manual SQL is also in `apartment_assignments.sql`.
 
-<br/>
-
-[Overview](#overview) · [Dependencies](#dependencies)
-
-</div>
-
----
-
-## Overview
-
-Player housing system for Pulsar Framework. Handles apartment ownership, key sharing, and routing players into private interior buckets. Integrates with the character system for persistent ownership storage.
-
----
-
-## Dependencies
-
-- `pulsar-core` — framework core, routing buckets
-- `pulsar-characters` — character ownership data
-- `oxmysql` — apartment persistence
-
----
-
-## License
-
-This resource is proprietary software. All rights reserved by the Pulsar Framework team. Unauthorized distribution or resale is prohibited.
-
----
-
-<div align="center">
-
-![Pulsar Framework](https://img.shields.io/badge/Pulsar-Framework-7c3aed?style=flat-square)
-![Built for FiveM](https://img.shields.io/badge/Built_for-FiveM-F40552?style=flat-square)
-
-</div>
+Apartment room doors are loaded from `shared/apartment_doors.lua`. Their names must match each room's `doorId` in `shared/config.lua` such as `apt_room_100`.
