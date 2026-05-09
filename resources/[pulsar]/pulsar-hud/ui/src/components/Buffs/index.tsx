@@ -62,7 +62,7 @@ const RING_SIZE   = BUFF_CHIP_SIZE
 const RING_STROKE = BUFF_RING_STROKE
 
 function BuffRing({ buff, def }: ChipProps) {
-  const icon    = (buff.override ?? def.icon) as string
+  const icon    = (buff.override || def.icon) as string
   const barPct  = def.type === 'permanent' ? 100 : (buff.val ?? 100)
   const color   = def.color ?? BUFF_BAR_COLOR
   const r       = (RING_SIZE - RING_STROKE * 2) / 2

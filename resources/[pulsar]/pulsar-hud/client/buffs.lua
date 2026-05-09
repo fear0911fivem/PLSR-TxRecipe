@@ -66,7 +66,7 @@ exports("ApplyBuff", function(buffId, val, override)
 		data = {
 			instance = {
 				buff      = buffId,
-				override  = override,
+				override  = type(override) == "string" and override or nil,
 				val       = v,
 				startTime = GetCloudTimeAsInt(),
 			},

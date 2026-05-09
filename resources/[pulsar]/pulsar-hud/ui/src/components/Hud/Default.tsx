@@ -34,12 +34,13 @@ export default function HudDefault() {
   const shifted = isShifted || inVeh
 
   const getPanelStyle = () => {
+    const vOffset = config.statusType === 'radial' ? '2.0rem' : '2.8rem'
     switch (config.layout) {
       case 'minimap':
         return {
           position: 'absolute' as const,
           left: `${((position.leftX ?? 0) + 0.0045) * 100}vw`,
-          top: `calc(${(position.bottomY ?? 0) * 100}vh - ${height}px + 2.8rem)`,
+          top: `calc(${(position.bottomY ?? 0) * 100}vh - ${height}px + ${vOffset})`,
           height: 'fit-content',
         }
       case 'center':
@@ -47,14 +48,14 @@ export default function HudDefault() {
           position: 'absolute' as const,
           left: '50%',
           transform: 'translateX(-50%)',
-          top: `calc(${(position.bottomY ?? 0) * 100}vh - ${height}px + 2.8rem)`,
+          top: `calc(${(position.bottomY ?? 0) * 100}vh - ${height}px + ${vOffset})`,
           height: 'fit-content',
         }
       default:
         return {
           position: 'absolute' as const,
           left: `${((position.leftX ?? 0) + 0.0045) * 100}vw`,
-          top: `calc(${(position.bottomY ?? 0) * 100}vh - ${height}px + 2.8rem)`,
+          top: `calc(${(position.bottomY ?? 0) * 100}vh - ${height}px + ${vOffset})`,
           height: 'fit-content',
         }
     }
