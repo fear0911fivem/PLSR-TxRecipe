@@ -8,13 +8,13 @@ Config.language = 'en'
 -- These are default keys to interact with dolu_tool commands.
 -- You can also override them in your pause menu, in the FiveM keybinds section.
 Config.openMenuKey = 'F3'
-Config.toggleNoclipKey = 'F11'
-Config.teleportMarkerKey = 'F10'
+Config.toggleNoclipKey = ''
+Config.teleportMarkerKey = ''
 
 Config.favoriteVehicle = 'adder'
 Config.customVehiclePlate = '~DOLU~' -- Remove the text if you don't want a custom plate.
 
 -- Permission system based on ace permissions.
 -- If Config.permission is set to false, everyone will have access to the menu.
-Config.usePermission = false
-Config.permission = { 'group.admin', 'qbcore.dev' }
+Config.usePermission = true
+Config.permission = { 'group.admin' }
