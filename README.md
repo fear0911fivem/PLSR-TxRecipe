@@ -1,8 +1,8 @@
 <div align="center">
   <img src="https://r2.fivemanage.com/GPYOH8Hq4GPyAY7czrgLe/pulsarbanner.png" alt="Pulsar Framework" width="100%">
 
-# Pulsar TxAdmin Recipie
-**One-click txAdmin recipe for deploying Pulsar Framework**
+# Pulsar Framework
+**Framework files for Pulsar Framework**
 
 [![FiveM](https://img.shields.io/badge/FiveM-F40552?style=flat-square)]()
 [![txAdmin](https://img.shields.io/badge/txAdmin-8.0%2B-blue?style=flat-square)]()
@@ -12,12 +12,12 @@
 
 ## Overview
 
-txAdmin recipe and server configuration files for deploying a full Pulsar Framework server in minutes. Automatically downloads and installs all resources, sets up the database, and configures your server.
+This version comes with the server configuration files for deploying a full Pulsar Framework server. Comes with all framework resources, easy setup of the database, and easy configuration for your server.
 
 ## Installation
 
 1. Open txAdmin and navigate to **Setup > Remote URL Recipe**
-2. Paste the following URL:
+2. Paste the following URL ( DOES NOT WORK DO NOT USE ):
    ```
    https://raw.githubusercontent.com/PulsarFW/PLSR-TxRecipe/main/pulsar-recipe.yaml
    ```
