@@ -18,27 +18,27 @@ Config = {
 		[0.0] = 0.0,
 	},
 	Classes = {
-		[0] = 0.7, -- Compacts
-		[1] = 0.8, -- Sedans
+		[0] = 1.0, -- Compacts
+		[1] = 1.0, -- Sedans
 		[2] = 1.0, -- SUVs
-		[3] = 0.9, -- Coupes
+		[3] = 1.0, -- Coupes
 		[4] = 1.0, -- Muscle
 		[5] = 1.0, -- Sports Classics
 		[6] = 1.0, -- Sports
-		[7] = 1.15, -- Super
-		[8] = 0.5, -- Motorcycles
+		[7] = 1.0, -- Super
+		[8] = 1.3, -- Motorcycles
 		[9] = 1.0, -- Off-road
-		[10] = 1.2, -- Industrial
-		[11] = 1.2, -- Utility
-		[12] = 1.2, -- Vans
+		[10] = 1.0, -- Industrial
+		[11] = 1.0, -- Utility
+		[12] = 1.0, -- Vans
 		[13] = 0.0, -- Cycles
-		[14] = 0.8, -- Boats
-		[15] = 25.0, -- Helicopters
-		[16] = 1.0, -- Planes
-		[17] = 1.2, -- Service
-		[18] = 0.8, -- Emergency
-		[19] = 1.4, -- Military
-		[20] = 1.2, -- Commercial
+		[14] = 1.2, -- Boats
+		[15] = 25.7, -- Helicopters
+		[16] = 1.5, -- Planes
+		[17] = 1.0, -- Service
+		[18] = 0.7, -- Emergency
+		[19] = 1.2, -- Military
+		[20] = 1.0, -- Commercial
 		[21] = 0.0, -- Trains
 	},
 	FuelCost = { -- Per % for each class
@@ -60,7 +60,7 @@ Config = {
 		[15] = 4.0, -- Helicopters
 		[16] = 5.0, -- Planes
 		[17] = 2.0, -- Service
-		[18] = 1.5, -- Emergency
+		[18] = 0.8, -- Emergency
 		[19] = 2.0, -- Military
 		[20] = 2.0, -- Commerical
 		[21] = 5.0, -- Trains
@@ -449,7 +449,7 @@ Config = {
 			maxZ = 40.67,
 			restricted = "aircraft",
 		},
-		{ -- Mission Row PD Helipad
+		{ -- Mission Row PD Helipad - Gabz
 			center = vector3(449.27, -981.0, 43.69),
 			length = 12.4,
 			width = 12.8,
@@ -457,6 +457,47 @@ Config = {
 			minZ = 42.69,
 			maxZ = 46.69,
 			restricted = "aircraft",
+		},
+
+		{ -- Mission Row PD Helipad - TStudio
+			center = vector3(480.5, -1009.3, 47.8),
+			length = 20.0,
+			width = 20.0,
+			heading = 0.0,
+			minZ = 55.22,
+			maxZ = 58.62,
+			restricted = 'aircraft',
+		},
+		{ -- Mission Row PD Helipad 2 - TStudio
+			center = vector3(480.5, -1009.3, 47.8),
+			length = 20.0,
+			width = 20.0,
+			heading = 0.0,
+			minZ = 55.22,
+			maxZ = 58.62,
+			restricted = 'aircraft',
+		},
+		
+		{ -- TSudio Mission Row PD
+			center = vector3(455.740478515625, -965.3427734375, 21.85638236999511),
+			length = 9.6,
+			width = 12.4,
+			heading = 0,
+			--debugPoly=true,
+			minZ = 21.593,
+			maxZ = 29.593,
+			restricted = false,
+		},
+		
+		{ -- TStudio Mission Row PD
+			center = vector3(454.8201599121094, -971.1425170898438, 22.00449180603027),
+			length = 9.6,
+			width = 12.4,
+			heading = 0,
+			--debugPoly=true,
+			minZ = 21.593,
+			maxZ = 29.593,
+			restricted = false,
 		},
 
 		{ -- Pillbox Helipad
@@ -588,6 +629,25 @@ Config = {
 			--debugPoly=true,
 			minZ = 20.04,
 			maxZ = 24.04,
+			restricted = false,
+		},
+		{
+			center = vector3(-1799.75, 803.02, 138.51),
+			length = 14.4,
+			width = 27.0,
+			heading = 40,
+			minZ = 137.51,
+			maxZ = 141.51,
+			restricted = false,
+		},
+		{
+			center = vector3(-319.94, -1471.15, 30.55),
+			length = 20.4,
+			width = 27.8,
+			heading = 30,
+			--debugPoly=true,
+			minZ = 29.55,
+			maxZ = 36.15,
 			restricted = false,
 		},
 	},

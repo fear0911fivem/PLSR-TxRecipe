@@ -12,7 +12,18 @@ local pumpModels = {
 	`prop_vintage_pump`,
 	`prop_gas_pump_old2`,
 	`prop_gas_pump_old3`,
-	486135101, -- LTD Grove Gabz
+	`tstudio_mrpd_asset_gas_pump`,
+	-- MODEL HASHES
+	`165803071`,
+    `-164877493`,
+    `-469694731`,
+    `-462817101`,
+    `-2007231801`,
+    `1933174915`,
+    `1694452750`,
+    `1339433404`,
+	`486135101`, -- LTD Grove Gabz
+	`165803071`, -- TStudio Pump
 }
 
 AddEventHandler('onClientResourceStart', function(resource)
