@@ -1,5 +1,5 @@
 AddEventHandler('Vehicles:Client:StartUp', function()
-    exports["pulsar-kbs"]:Add('emergency_lights', 'Q', 'keyboard', 'Vehicle - Toggle Emergency Lighting',
+    --[[exports["pulsar-kbs"]:Add('emergency_lights', 'Q', 'keyboard', 'Vehicle - Toggle Emergency Lighting',
         function()
             exports['pulsar-vehicles']:SyncEmergencyLightsToggle()
         end)
@@ -12,7 +12,7 @@ AddEventHandler('Vehicles:Client:StartUp', function()
     exports["pulsar-kbs"]:Add('emergency_sirens_tone', 'R', 'keyboard', 'Vehicle - Cycle Emergency Siren Tone',
         function()
             exports['pulsar-vehicles']:SyncEmergencySirenCycle()
-        end)
+        end)]]
 
     exports["pulsar-kbs"]:Add('emergency_airhorn', 'E', 'keyboard', 'Vehicle - Emergency Airhorn', function()
         exports['pulsar-vehicles']:SyncEmergencyAirhornSet(true)
