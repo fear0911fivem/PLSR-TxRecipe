@@ -1,5 +1,16 @@
 return {
 	Weapons = {
+		--PRP Sensor
+		["WEAPON_DIGISCANNER"] = {
+			label = "Digital Scanner",
+			weight = 250
+		},
+		--PRP Scanner
+		["WEAPON_SCANNER"] = {
+			label = "Scanner",
+			weight = 250
+		},
+
 		['WEAPON_BATTLERIFLE'] = {
 			label = 'Battle Rifle',
 			weight = 3300,
@@ -716,6 +727,105 @@ return {
 			weight = 600,
 			throwable = true,
 		},
+
+		-- MARKO MODS
+
+		['WEAPON_UBR_OG'] = {
+	label = 'UBR OG',
+	weight = 1600,
+	durability = 0.03,
+	ammoname = 'ammo-rifle',
+},
+['WEAPON_UBR_MODERN'] = {
+	label = 'UBR MODERN',
+	weight = 1600,
+	durability = 0.03,
+	ammoname = 'ammo-rifle',
+},
+['WEAPON_UBR_CQB'] = {
+	label = 'UBR CQB',
+	weight = 1600,
+	durability = 0.03,
+	ammoname = 'ammo-rifle',
+},
+['WEAPON_FMAS'] = {
+	label = 'FMAS',
+	weight = 1600,
+	durability = 0.03,
+	ammoname = 'ammo-rifle',
+},
+['WEAPON_DRAGON'] = {
+	label = 'DRAGON',
+	weight = 1600,
+	durability = 0.03,
+	ammoname = 'ammo-rifle',
+},
+['WEAPON_DRAGON_GOLD'] = {
+	label = 'DRAGON GOLD',
+	weight = 1600,
+	durability = 0.03,
+	ammoname = 'ammo-rifle',
+},
+['WEAPON_X17M'] = {
+	label = 'X17M',
+	weight = 1600,
+	durability = 0.03,
+	ammoname = 'ammo-9',
+},
+['WEAPON_X17MS'] = {
+	label = 'X17MS',
+	weight = 1600,
+	durability = 0.03,
+	ammoname = 'ammo-9',
+},
+['WEAPON_VIRTUS_1'] = {
+	label = 'VIRTUS 1',
+	weight = 1600,
+	durability = 0.03,
+	ammoname = 'ammo-rifle',
+},
+['WEAPON_VIRTUS_2'] = {
+	label = 'VIRTUS 2',
+	weight = 1600,
+	durability = 0.03,
+	ammoname = 'ammo-rifle',
+},
+['WEAPON_VIRTUS_3'] = {
+	label = 'VIRTUS 3',
+	weight = 1600,
+	durability = 0.03,
+	ammoname = 'ammo-rifle',
+},
+['WEAPON_VIRTUS_4'] = {
+	label = 'VIRTUS 4',
+	weight = 1600,
+	durability = 0.03,
+	ammoname = 'ammo-rifle',
+},
+['WEAPON_AGC'] = {
+	label = 'AGC',
+	weight = 1600,
+	durability = 0.03,
+	ammoname = 'ammo-9',
+},
+['WEAPON_X19'] = {
+	label = 'X19',
+	weight = 1600,
+	durability = 0.03,
+	ammoname = 'ammo-9',
+},
+['WEAPON_MB47'] = {
+	label = 'MB47',
+	weight = 1600,
+	durability = 0.03,
+	ammoname = 'ammo-rifle',
+},
+['WEAPON_KVR'] = {
+	label = 'KVR',
+	weight = 1600,
+	durability = 0.03,
+	ammoname = 'ammo-9',
+},
 	},
 
 	Components = {
@@ -1779,6 +1889,2961 @@ return {
 				usetime = 2500
 			}
 		},
+
+		-- MARKO MODS ATTACHMENTS
+
+		['ubr_mag_01'] = {
+	label = 'Ubr Mag #01',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_MAG_01'},
+		usetime = 2500
+	},
+},
+['ubr_mag_02'] = {
+	label = 'Ubr Mag #02',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_MAG_02'},
+		usetime = 2500
+	},
+},
+['ubr_mag_03'] = {
+	label = 'Ubr Mag #03',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_MAG_03'},
+		usetime = 2500
+	},
+},
+['ubr_mag_04'] = {
+	label = 'Ubr Mag #04',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_MAG_04'},
+		usetime = 2500
+	},
+},
+['ubr_mag_05'] = {
+	label = 'Ubr Mag #05',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_MAG_05'},
+		usetime = 2500
+	},
+},
+['ubr_mag_06'] = {
+	label = 'Ubr Mag #06',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_MAG_06'},
+		usetime = 2500
+	},
+},
+['ubr_mag_07'] = {
+	label = 'Ubr Mag #07',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_MAG_07'},
+		usetime = 2500
+	},
+},
+['ubr_mag_08'] = {
+	label = 'Ubr Mag #08',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_MAG_08'},
+		usetime = 2500
+	},
+},
+['ubr_og_barrel_01'] = {
+	label = 'Ubr Og Barrel #01',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_OG_BARREL_01'},
+		usetime = 2500
+	},
+},
+['ubr_og_barrel_02'] = {
+	label = 'Ubr Og Barrel #02',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_OG_BARREL_02'},
+		usetime = 2500
+	},
+},
+['ubr_suppressor_01'] = {
+	label = 'Ubr Suppressor #01',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_SUPPRESSOR_01'},
+		usetime = 2500
+	},
+},
+['ubr_og_scope_01'] = {
+	label = 'Ubr Og Scope #01',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_OG_SCOPE_01'},
+		usetime = 2500
+	},
+},
+['ubr_og_scope_02'] = {
+	label = 'Ubr Og Scope #02',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_OG_SCOPE_02'},
+		usetime = 2500
+	},
+},
+['ubr_grip_01'] = {
+	label = 'Ubr Grip #01',
+	weight = 200,
+	type = 'grip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_GRIP_01'},
+		usetime = 2500
+	},
+},
+['ubr_grip_02'] = {
+	label = 'Ubr Grip #02',
+	weight = 200,
+	type = 'grip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_GRIP_02'},
+		usetime = 2500
+	},
+},
+['ubr_grip_03'] = {
+	label = 'Ubr Grip #03',
+	weight = 200,
+	type = 'grip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_GRIP_03'},
+		usetime = 2500
+	},
+},
+['ubr_grip_04'] = {
+	label = 'Ubr Grip #04',
+	weight = 200,
+	type = 'grip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_GRIP_04'},
+		usetime = 2500
+	},
+},
+['ubr_grip_05'] = {
+	label = 'Ubr Grip #05',
+	weight = 200,
+	type = 'grip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_GRIP_05'},
+		usetime = 2500
+	},
+},
+['ubr_grip_06'] = {
+	label = 'Ubr Grip #06',
+	weight = 200,
+	type = 'grip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_GRIP_06'},
+		usetime = 2500
+	},
+},
+['ubr_grip_07'] = {
+	label = 'Ubr Grip #07',
+	weight = 200,
+	type = 'grip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_GRIP_07'},
+		usetime = 2500
+	},
+},
+['ubr_grip_08'] = {
+	label = 'Ubr Grip #08',
+	weight = 200,
+	type = 'grip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_GRIP_08'},
+		usetime = 2500
+	},
+},
+['ubr_grip_09'] = {
+	label = 'Ubr Grip #09',
+	weight = 200,
+	type = 'grip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_GRIP_09'},
+		usetime = 2500
+	},
+},
+['ubr_grip_10'] = {
+	label = 'Ubr Grip #10',
+	weight = 200,
+	type = 'grip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_GRIP_10'},
+		usetime = 2500
+	},
+},
+['ubr_body_01'] = {
+	label = 'Ubr Body #01',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_BODY_01'},
+		usetime = 2500
+	},
+},
+['ubr_body_02'] = {
+	label = 'Ubr Body #02',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_BODY_02'},
+		usetime = 2500
+	},
+},
+['ubr_body_03'] = {
+	label = 'Ubr Body #03',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_BODY_03'},
+		usetime = 2500
+	},
+},
+['ubr_body_04'] = {
+	label = 'Ubr Body #04',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_BODY_04'},
+		usetime = 2500
+	},
+},
+['ubr_laser_01'] = {
+	label = 'Ubr Laser #01',
+	weight = 200,
+	type = 'laser',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_LASER_01'},
+		usetime = 2500
+	},
+},
+['ubr_laser_02'] = {
+	label = 'Ubr Laser #02',
+	weight = 200,
+	type = 'laser',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_LASER_02'},
+		usetime = 2500
+	},
+},
+['ubr_laser_03'] = {
+	label = 'Ubr Laser #03',
+	weight = 200,
+	type = 'laser',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_LASER_03'},
+		usetime = 2500
+	},
+},
+['ubr_flash_01'] = {
+	label = 'Ubr Flash #01',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_FLASH_01'},
+		usetime = 2500
+	},
+},
+['ubr_flash_02'] = {
+	label = 'Ubr Flash #02',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_FLASH_02'},
+		usetime = 2500
+	},
+},
+['ubr_flash_03'] = {
+	label = 'Ubr Flash #03',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_FLASH_03'},
+		usetime = 2500
+	},
+},
+['ubr_flashlaser_01'] = {
+	label = 'Ubr Flashlaser #01',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_FLASHLASER_01'},
+		usetime = 2500
+	},
+},
+['ubr_flashlaser_02'] = {
+	label = 'Ubr Flashlaser #02',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_FLASHLASER_02'},
+		usetime = 2500
+	},
+},
+['ubr_flashlaser_03'] = {
+	label = 'Ubr Flashlaser #03',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_FLASHLASER_03'},
+		usetime = 2500
+	},
+},
+['ubr_flashlaser_04'] = {
+	label = 'Ubr Flashlaser #04',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_FLASHLASER_04'},
+		usetime = 2500
+	},
+},
+['ubr_modern_barrel_01'] = {
+	label = 'Ubr Modern Barrel #01',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_MODERN_BARREL_01'},
+		usetime = 2500
+	},
+},
+['ubr_modern_barrel_02'] = {
+	label = 'Ubr Modern Barrel #02',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_MODERN_BARREL_02'},
+		usetime = 2500
+	},
+},
+['ubr_cqb_mag_01'] = {
+	label = 'Ubr Cqb Mag #01',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_CQB_MAG_01'},
+		usetime = 2500
+	},
+},
+['ubr_cqb_barrel_01'] = {
+	label = 'Ubr Cqb Barrel #01',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_CQB_BARREL_01'},
+		usetime = 2500
+	},
+},
+['ubr_cqb_barrel_02'] = {
+	label = 'Ubr Cqb Barrel #02',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_CQB_BARREL_02'},
+		usetime = 2500
+	},
+},
+['ubr_cqb_body_01'] = {
+	label = 'Ubr Cqb Body #01',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_CQB_BODY_01'},
+		usetime = 2500
+	},
+},
+['ubr_cqb_body_02'] = {
+	label = 'Ubr Cqb Body #02',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_CQB_BODY_02'},
+		usetime = 2500
+	},
+},
+['ubr_cqb_body_03'] = {
+	label = 'Ubr Cqb Body #03',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_CQB_BODY_03'},
+		usetime = 2500
+	},
+},
+['ubr_cqb_body_04'] = {
+	label = 'Ubr Cqb Body #04',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_UBR_CQB_BODY_04'},
+		usetime = 2500
+	},
+},
+['fmas_mag_01'] = {
+	label = 'Fmas Mag #01',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_FMAS_MAG_01'},
+		usetime = 2500
+	},
+},
+['fmas_mag_02'] = {
+	label = 'Fmas Mag #02',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_FMAS_MAG_02'},
+		usetime = 2500
+	},
+},
+['fmas_mag_03'] = {
+	label = 'Fmas Mag #03',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_FMAS_MAG_03'},
+		usetime = 2500
+	},
+},
+['fmas_mag_04'] = {
+	label = 'Fmas Mag #04',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_FMAS_MAG_04'},
+		usetime = 2500
+	},
+},
+['fmas_mag_05'] = {
+	label = 'Fmas Mag #05',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_FMAS_MAG_05'},
+		usetime = 2500
+	},
+},
+['fmas_mag_06'] = {
+	label = 'Fmas Mag #06',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_FMAS_MAG_06'},
+		usetime = 2500
+	},
+},
+['fmas_scope_01'] = {
+	label = 'Fmas Scope #01',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_FMAS_SCOPE_01'},
+		usetime = 2500
+	},
+},
+['fmas_rail_scope'] = {
+	label = 'Fmas Rail Scope',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_FMAS_RAIL_SCOPE'},
+		usetime = 2500
+	},
+},
+['fmas_rail_grip'] = {
+	label = 'Fmas Rail Grip',
+	weight = 200,
+	type = 'grip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_FMAS_RAIL_GRIP'},
+		usetime = 2500
+	},
+},
+['fmas_rail_all'] = {
+	label = 'Fmas Rail All',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_FMAS_RAIL_ALL'},
+		usetime = 2500
+	},
+},
+['fmas_suppressor_01'] = {
+	label = 'Fmas Suppressor #01',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_FMAS_SUPPRESSOR_01'},
+		usetime = 2500
+	},
+},
+['dragon_mag_01'] = {
+	label = 'Dragon Mag #01',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_DRAGON_MAG_01'},
+		usetime = 2500
+	},
+},
+['dragon_mag_02'] = {
+	label = 'Dragon Mag #02',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_DRAGON_MAG_02'},
+		usetime = 2500
+	},
+},
+['dragon_mag_03'] = {
+	label = 'Dragon Mag #03',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_DRAGON_MAG_03'},
+		usetime = 2500
+	},
+},
+['dragon_mag_04'] = {
+	label = 'Dragon Mag #04',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_DRAGON_MAG_04'},
+		usetime = 2500
+	},
+},
+['dragon_mag_05'] = {
+	label = 'Dragon Mag #05',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_DRAGON_MAG_05'},
+		usetime = 2500
+	},
+},
+['dragon_mag_06'] = {
+	label = 'Dragon Mag #06',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_DRAGON_MAG_06'},
+		usetime = 2500
+	},
+},
+['dragon_stock_01'] = {
+	label = 'Dragon Stock #01',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_DRAGON_STOCK_01'},
+		usetime = 2500
+	},
+},
+['dragon_scope_01'] = {
+	label = 'Dragon Scope #01',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_DRAGON_SCOPE_01'},
+		usetime = 2500
+	},
+},
+['dragon_scope_02'] = {
+	label = 'Dragon Scope #02',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_DRAGON_SCOPE_02'},
+		usetime = 2500
+	},
+},
+['dragon_scope_03'] = {
+	label = 'Dragon Scope #03',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_DRAGON_SCOPE_03'},
+		usetime = 2500
+	},
+},
+['dragon_scope_04'] = {
+	label = 'Dragon Scope #04',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_DRAGON_SCOPE_04'},
+		usetime = 2500
+	},
+},
+['dragon_scope_05'] = {
+	label = 'Dragon Scope #05',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_DRAGON_SCOPE_05'},
+		usetime = 2500
+	},
+},
+['dragon_scope_06'] = {
+	label = 'Dragon Scope #06',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_DRAGON_SCOPE_06'},
+		usetime = 2500
+	},
+},
+['dragon_scope_07'] = {
+	label = 'Dragon Scope #07',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_DRAGON_SCOPE_07'},
+		usetime = 2500
+	},
+},
+['x17m_magazine_01'] = {
+	label = 'X17m Magazine #01',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_MAGAZINE_01'},
+		usetime = 2500
+	},
+},
+['x17m_magazine_02'] = {
+	label = 'X17m Magazine #02',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_MAGAZINE_02'},
+		usetime = 2500
+	},
+},
+['x17m_magazine_03'] = {
+	label = 'X17m Magazine #03',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_MAGAZINE_03'},
+		usetime = 2500
+	},
+},
+['x17m_magazine_04'] = {
+	label = 'X17m Magazine #04',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_MAGAZINE_04'},
+		usetime = 2500
+	},
+},
+['x17m_magazine_05'] = {
+	label = 'X17m Magazine #05',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_MAGAZINE_05'},
+		usetime = 2500
+	},
+},
+['x17m_magazine_06'] = {
+	label = 'X17m Magazine #06',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_MAGAZINE_06'},
+		usetime = 2500
+	},
+},
+['x17m_magazine_07'] = {
+	label = 'X17m Magazine #07',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_MAGAZINE_07'},
+		usetime = 2500
+	},
+},
+['x17m_frame_01'] = {
+	label = 'X17m Frame #01',
+	weight = 200,
+	type = 'frame',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_FRAME_01'},
+		usetime = 2500
+	},
+},
+['x17m_frame_02'] = {
+	label = 'X17m Frame #02',
+	weight = 200,
+	type = 'frame',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_FRAME_02'},
+		usetime = 2500
+	},
+},
+['x17m_frame_03'] = {
+	label = 'X17m Frame #03',
+	weight = 200,
+	type = 'frame',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_FRAME_03'},
+		usetime = 2500
+	},
+},
+['x17m_frame_04'] = {
+	label = 'X17m Frame #04',
+	weight = 200,
+	type = 'frame',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_FRAME_04'},
+		usetime = 2500
+	},
+},
+['x17m_frame_05'] = {
+	label = 'X17m Frame #05',
+	weight = 200,
+	type = 'frame',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_FRAME_05'},
+		usetime = 2500
+	},
+},
+['x17m_frame_06'] = {
+	label = 'X17m Frame #06',
+	weight = 200,
+	type = 'frame',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_FRAME_06'},
+		usetime = 2500
+	},
+},
+['x17m_frame_07'] = {
+	label = 'X17m Frame #07',
+	weight = 200,
+	type = 'frame',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_FRAME_07'},
+		usetime = 2500
+	},
+},
+['x17m_frame_08'] = {
+	label = 'X17m Frame #08',
+	weight = 200,
+	type = 'frame',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_FRAME_08'},
+		usetime = 2500
+	},
+},
+['x17m_frame_09'] = {
+	label = 'X17m Frame #09',
+	weight = 200,
+	type = 'frame',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_FRAME_09'},
+		usetime = 2500
+	},
+},
+['x17m_frame_10'] = {
+	label = 'X17m Frame #10',
+	weight = 200,
+	type = 'frame',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_FRAME_10'},
+		usetime = 2500
+	},
+},
+['x17m_slide_01'] = {
+	label = 'X17m Slide #01',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_SLIDE_01'},
+		usetime = 2500
+	},
+},
+['x17m_switchslide_01'] = {
+	label = 'X17m Switchslide #01',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_SWITCHSLIDE_01'},
+		usetime = 2500
+	},
+},
+['x17m_slide_02'] = {
+	label = 'X17m Slide #02',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_SLIDE_02'},
+		usetime = 2500
+	},
+},
+['x17m_switchslide_02'] = {
+	label = 'X17m Switchslide #02',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_SWITCHSLIDE_02'},
+		usetime = 2500
+	},
+},
+['x17m_slide_03'] = {
+	label = 'X17m Slide #03',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_SLIDE_03'},
+		usetime = 2500
+	},
+},
+['x17m_switchslide_03'] = {
+	label = 'X17m Switchslide #03',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_SWITCHSLIDE_03'},
+		usetime = 2500
+	},
+},
+['x17m_slide_04'] = {
+	label = 'X17m Slide #04',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_SLIDE_04'},
+		usetime = 2500
+	},
+},
+['x17m_switchslide_04'] = {
+	label = 'X17m Switchslide #04',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_SWITCHSLIDE_04'},
+		usetime = 2500
+	},
+},
+['x17m_slide_05'] = {
+	label = 'X17m Slide #05',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_SLIDE_05'},
+		usetime = 2500
+	},
+},
+['x17m_switchslide_05'] = {
+	label = 'X17m Switchslide #05',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_SWITCHSLIDE_05'},
+		usetime = 2500
+	},
+},
+['x17m_flashlight_01'] = {
+	label = 'X17m Flashlight #01',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_FLASHLIGHT_01'},
+		usetime = 2500
+	},
+},
+['x17m_flashlight_02'] = {
+	label = 'X17m Flashlight #02',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_FLASHLIGHT_02'},
+		usetime = 2500
+	},
+},
+['x17m_flashlight_03'] = {
+	label = 'X17m Flashlight #03',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_FLASHLIGHT_03'},
+		usetime = 2500
+	},
+},
+['x17m_flashlight_04'] = {
+	label = 'X17m Flashlight #04',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_FLASHLIGHT_04'},
+		usetime = 2500
+	},
+},
+['x17m_flashlight_05'] = {
+	label = 'X17m Flashlight #05',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_FLASHLIGHT_05'},
+		usetime = 2500
+	},
+},
+['x17m_flashlight_06'] = {
+	label = 'X17m Flashlight #06',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_FLASHLIGHT_06'},
+		usetime = 2500
+	},
+},
+['x17m_cover_01'] = {
+	label = 'X17m Cover #01',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_COVER_01'},
+		usetime = 2500
+	},
+},
+['x17m_cover_02'] = {
+	label = 'X17m Cover #02',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_COVER_02'},
+		usetime = 2500
+	},
+},
+['x17m_cover_03'] = {
+	label = 'X17m Cover #03',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_COVER_03'},
+		usetime = 2500
+	},
+},
+['x17m_cover_04'] = {
+	label = 'X17m Cover #04',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_COVER_04'},
+		usetime = 2500
+	},
+},
+['x17m_scope_01'] = {
+	label = 'X17m Scope #01',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_SCOPE_01'},
+		usetime = 2500
+	},
+},
+['x17m_scope_02'] = {
+	label = 'X17m Scope #02',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_SCOPE_02'},
+		usetime = 2500
+	},
+},
+['x17m_scope_03'] = {
+	label = 'X17m Scope #03',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_SCOPE_03'},
+		usetime = 2500
+	},
+},
+['x17m_scope_04'] = {
+	label = 'X17m Scope #04',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_SCOPE_04'},
+		usetime = 2500
+	},
+},
+['x17m_barrel_01'] = {
+	label = 'X17m Barrel #01',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_BARREL_01'},
+		usetime = 2500
+	},
+},
+['x17m_barrel_02'] = {
+	label = 'X17m Barrel #02',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_BARREL_02'},
+		usetime = 2500
+	},
+},
+['x17m_barrel_03'] = {
+	label = 'X17m Barrel #03',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_BARREL_03'},
+		usetime = 2500
+	},
+},
+['x17m_barrel_04'] = {
+	label = 'X17m Barrel #04',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_BARREL_04'},
+		usetime = 2500
+	},
+},
+['x17m_barrel_05'] = {
+	label = 'X17m Barrel #05',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_BARREL_05'},
+		usetime = 2500
+	},
+},
+['x17m_barrel_06'] = {
+	label = 'X17m Barrel #06',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_BARREL_06'},
+		usetime = 2500
+	},
+},
+['x17m_barrel_07'] = {
+	label = 'X17m Barrel #07',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_BARREL_07'},
+		usetime = 2500
+	},
+},
+['x17m_barrel_08'] = {
+	label = 'X17m Barrel #08',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_BARREL_08'},
+		usetime = 2500
+	},
+},
+['x17m_barrel_09'] = {
+	label = 'X17m Barrel #09',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_BARREL_09'},
+		usetime = 2500
+	},
+},
+['x17m_muzzle_01'] = {
+	label = 'X17m Muzzle #01',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_MUZZLE_01'},
+		usetime = 2500
+	},
+},
+['x17m_muzzle_02'] = {
+	label = 'X17m Muzzle #02',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_MUZZLE_02'},
+		usetime = 2500
+	},
+},
+['x17m_suppressor_01'] = {
+	label = 'X17m Suppressor #01',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_SUPPRESSOR_01'},
+		usetime = 2500
+	},
+},
+['x17m_suppressor_02'] = {
+	label = 'X17m Suppressor #02',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_SUPPRESSOR_02'},
+		usetime = 2500
+	},
+},
+['x17m_suppressor_03'] = {
+	label = 'X17m Suppressor #03',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_SUPPRESSOR_03'},
+		usetime = 2500
+	},
+},
+['x17m_suppressor_04'] = {
+	label = 'X17m Suppressor #04',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_X17M_SUPPRESSOR_04'},
+		usetime = 2500
+	},
+},
+['virtus_body1_2'] = {
+	label = 'Virtus Body1 #2',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_BODY1_2'},
+		usetime = 2500
+	},
+},
+['virtus_body2_2'] = {
+	label = 'Virtus Body2 #2',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_BODY2_2'},
+		usetime = 2500
+	},
+},
+['virtus_body3_2'] = {
+	label = 'Virtus Body3 #2',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_BODY3_2'},
+		usetime = 2500
+	},
+},
+['virtus_handguard1_1'] = {
+	label = 'Virtus Handguard1 #1',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD1_1'},
+		usetime = 2500
+	},
+},
+['virtus_handguard2_1'] = {
+	label = 'Virtus Handguard2 #1',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD2_1'},
+		usetime = 2500
+	},
+},
+['virtus_handguard3_1'] = {
+	label = 'Virtus Handguard3 #1',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD3_1'},
+		usetime = 2500
+	},
+},
+['virtus_muzzle_1'] = {
+	label = 'Virtus Muzzle #1',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_MUZZLE_1'},
+		usetime = 2500
+	},
+},
+['virtus_body1_1'] = {
+	label = 'Virtus Body1 #1',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_BODY1_1'},
+		usetime = 2500
+	},
+},
+['virtus_body2_1'] = {
+	label = 'Virtus Body2 #1',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_BODY2_1'},
+		usetime = 2500
+	},
+},
+['virtus_body3_1'] = {
+	label = 'Virtus Body3 #1',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_BODY3_1'},
+		usetime = 2500
+	},
+},
+['virtus_handguard1_2'] = {
+	label = 'Virtus Handguard1 #2',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD1_2'},
+		usetime = 2500
+	},
+},
+['virtus_handguard2_2'] = {
+	label = 'Virtus Handguard2 #2',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD2_2'},
+		usetime = 2500
+	},
+},
+['virtus_handguard3_2'] = {
+	label = 'Virtus Handguard3 #2',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD3_2'},
+		usetime = 2500
+	},
+},
+['virtus_handguard1_3'] = {
+	label = 'Virtus Handguard1 #3',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD1_3'},
+		usetime = 2500
+	},
+},
+['virtus_handguard2_3'] = {
+	label = 'Virtus Handguard2 #3',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD2_3'},
+		usetime = 2500
+	},
+},
+['virtus_handguard3_3'] = {
+	label = 'Virtus Handguard3 #3',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD3_3'},
+		usetime = 2500
+	},
+},
+['virtus_body1_3'] = {
+	label = 'Virtus Body1 #3',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_BODY1_3'},
+		usetime = 2500
+	},
+},
+['virtus_body2_3'] = {
+	label = 'Virtus Body2 #3',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_BODY2_3'},
+		usetime = 2500
+	},
+},
+['virtus_body3_3'] = {
+	label = 'Virtus Body3 #3',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_BODY3_3'},
+		usetime = 2500
+	},
+},
+['virtus_handguard1_4'] = {
+	label = 'Virtus Handguard1 #4',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD1_4'},
+		usetime = 2500
+	},
+},
+['virtus_handguard2_4'] = {
+	label = 'Virtus Handguard2 #4',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD2_4'},
+		usetime = 2500
+	},
+},
+['virtus_handguard3_4'] = {
+	label = 'Virtus Handguard3 #4',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD3_4'},
+		usetime = 2500
+	},
+},
+['virtus_handguard1_5'] = {
+	label = 'Virtus Handguard1 #5',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD1_5'},
+		usetime = 2500
+	},
+},
+['virtus_handguard2_5'] = {
+	label = 'Virtus Handguard2 #5',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD2_5'},
+		usetime = 2500
+	},
+},
+['virtus_handguard3_5'] = {
+	label = 'Virtus Handguard3 #5',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD3_5'},
+		usetime = 2500
+	},
+},
+['virtus_body1_4'] = {
+	label = 'Virtus Body1 #4',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_BODY1_4'},
+		usetime = 2500
+	},
+},
+['virtus_body2_4'] = {
+	label = 'Virtus Body2 #4',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_BODY2_4'},
+		usetime = 2500
+	},
+},
+['virtus_body3_4'] = {
+	label = 'Virtus Body3 #4',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_BODY3_4'},
+		usetime = 2500
+	},
+},
+['virtus_handguard1_6'] = {
+	label = 'Virtus Handguard1 #6',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD1_6'},
+		usetime = 2500
+	},
+},
+['virtus_handguard2_6'] = {
+	label = 'Virtus Handguard2 #6',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD2_6'},
+		usetime = 2500
+	},
+},
+['virtus_handguard3_6'] = {
+	label = 'Virtus Handguard3 #6',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD3_6'},
+		usetime = 2500
+	},
+},
+['virtus_handguard1_7'] = {
+	label = 'Virtus Handguard1 #7',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD1_7'},
+		usetime = 2500
+	},
+},
+['virtus_handguard2_7'] = {
+	label = 'Virtus Handguard2 #7',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD2_7'},
+		usetime = 2500
+	},
+},
+['virtus_handguard3_7'] = {
+	label = 'Virtus Handguard3 #7',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_HANDGUARD3_7'},
+		usetime = 2500
+	},
+},
+['virtus_flashlight_1'] = {
+	label = 'Virtus Flashlight #1',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_FLASHLIGHT_1'},
+		usetime = 2500
+	},
+},
+['virtus_stock_1'] = {
+	label = 'Virtus Stock #1',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_STOCK_1'},
+		usetime = 2500
+	},
+},
+['virtus_stock_2'] = {
+	label = 'Virtus Stock #2',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_STOCK_2'},
+		usetime = 2500
+	},
+},
+['virtus_stock_3'] = {
+	label = 'Virtus Stock #3',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_STOCK_3'},
+		usetime = 2500
+	},
+},
+['virtus_stock_4'] = {
+	label = 'Virtus Stock #4',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_STOCK_4'},
+		usetime = 2500
+	},
+},
+['virtus_stock_5'] = {
+	label = 'Virtus Stock #5',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_STOCK_5'},
+		usetime = 2500
+	},
+},
+['virtus_stock_6'] = {
+	label = 'Virtus Stock #6',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_STOCK_6'},
+		usetime = 2500
+	},
+},
+['virtus_stock_7'] = {
+	label = 'Virtus Stock #7',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_STOCK_7'},
+		usetime = 2500
+	},
+},
+['virtus_stock_8'] = {
+	label = 'Virtus Stock #8',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_VIRTUS_STOCK_8'},
+		usetime = 2500
+	},
+},
+['agc_clip_01'] = {
+	label = 'Agc Clip #01',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODSAGC_CLIP_01'},
+		usetime = 2500
+	},
+},
+['agc_stock_01'] = {
+	label = 'Agc Stock #01',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODSAGC_STOCK_01'},
+		usetime = 2500
+	},
+},
+['agc_stock_02'] = {
+	label = 'Agc Stock #02',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODSAGC_STOCK_02'},
+		usetime = 2500
+	},
+},
+['agc_stock_03'] = {
+	label = 'Agc Stock #03',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODSAGC_STOCK_03'},
+		usetime = 2500
+	},
+},
+['agc_scope_01'] = {
+	label = 'Agc Scope #01',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODSAGC_SCOPE_01'},
+		usetime = 2500
+	},
+},
+['agc_scope_02'] = {
+	label = 'Agc Scope #02',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODSAGC_SCOPE_02'},
+		usetime = 2500
+	},
+},
+['x19_clip_01'] = {
+	label = 'X19 Clip #01',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODSX19_CLIP_01'},
+		usetime = 2500
+	},
+},
+['x19_clip_02'] = {
+	label = 'X19 Clip #02',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODSX19_CLIP_02'},
+		usetime = 2500
+	},
+},
+['x19_clip_03'] = {
+	label = 'X19 Clip #03',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODSX19_CLIP_03'},
+		usetime = 2500
+	},
+},
+['x19_muzzle_01'] = {
+	label = 'X19 Muzzle #01',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODSX19_MUZZLE_01'},
+		usetime = 2500
+	},
+},
+['x19_barrel_01'] = {
+	label = 'X19 Barrel #01',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODSX19_BARREL_01'},
+		usetime = 2500
+	},
+},
+['x19_barrel_02'] = {
+	label = 'X19 Barrel #02',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODSX19_BARREL_02'},
+		usetime = 2500
+	},
+},
+['x19_barrel_03'] = {
+	label = 'X19 Barrel #03',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODSX19_BARREL_03'},
+		usetime = 2500
+	},
+},
+['x19_barrel_04'] = {
+	label = 'X19 Barrel #04',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODSX19_BARREL_04'},
+		usetime = 2500
+	},
+},
+['x19_slide_01'] = {
+	label = 'X19 Slide #01',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODSX19_SLIDE_01'},
+		usetime = 2500
+	},
+},
+['x19_slide_02'] = {
+	label = 'X19 Slide #02',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODSX19_SLIDE_02'},
+		usetime = 2500
+	},
+},
+['x19_slide_03'] = {
+	label = 'X19 Slide #03',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODSX19_SLIDE_03'},
+		usetime = 2500
+	},
+},
+['x19_slide_04'] = {
+	label = 'X19 Slide #04',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODSX19_SLIDE_04'},
+		usetime = 2500
+	},
+},
+['x19_slide_05'] = {
+	label = 'X19 Slide #05',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODSX19_SLIDE_05'},
+		usetime = 2500
+	},
+},
+['x19_slide_06'] = {
+	label = 'X19 Slide #06',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODSX19_SLIDE_06'},
+		usetime = 2500
+	},
+},
+['x19_slide_07'] = {
+	label = 'X19 Slide #07',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODSX19_SLIDE_07'},
+		usetime = 2500
+	},
+},
+['x19_slide_08'] = {
+	label = 'X19 Slide #08',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODSX19_SLIDE_08'},
+		usetime = 2500
+	},
+},
+['x19_slide_09'] = {
+	label = 'X19 Slide #09',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODSX19_SLIDE_09'},
+		usetime = 2500
+	},
+},
+['x19_slide_10'] = {
+	label = 'X19 Slide #10',
+	weight = 200,
+	type = 'slide',
+	client = {
+		component = {'COMPONENT_MARKOMODSX19_SLIDE_10'},
+		usetime = 2500
+	},
+},
+['mb47_clip_01'] = {
+	label = 'Mb47 Clip #01',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_MB47_CLIP_01'},
+		usetime = 2500
+	},
+},
+['mb47_stock_01'] = {
+	label = 'Mb47 Stock #01',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_MB47_STOCK_01'},
+		usetime = 2500
+	},
+},
+['mb47_scope_01'] = {
+	label = 'Mb47 Scope #01',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_MB47_SCOPE_01'},
+		usetime = 2500
+	},
+},
+['mb47_muzzle_01'] = {
+	label = 'Mb47 Muzzle #01',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_MB47_MUZZLE_01'},
+		usetime = 2500
+	},
+},
+['mb47_body_01'] = {
+	label = 'Mb47 Body #01',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_MB47_BODY_01'},
+		usetime = 2500
+	},
+},
+['mb47_body_02'] = {
+	label = 'Mb47 Body #02',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_MB47_BODY_02'},
+		usetime = 2500
+	},
+},
+['mb47_body_03'] = {
+	label = 'Mb47 Body #03',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_MB47_BODY_03'},
+		usetime = 2500
+	},
+},
+['mb47_body_04'] = {
+	label = 'Mb47 Body #04',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_MB47_BODY_04'},
+		usetime = 2500
+	},
+},
+['mb47_handguard_01'] = {
+	label = 'Mb47 Handguard #01',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_MB47_HANDGUARD_01'},
+		usetime = 2500
+	},
+},
+['mb47_handguard_02'] = {
+	label = 'Mb47 Handguard #02',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_MB47_HANDGUARD_02'},
+		usetime = 2500
+	},
+},
+['mb47_handguard_03'] = {
+	label = 'Mb47 Handguard #03',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_MB47_HANDGUARD_03'},
+		usetime = 2500
+	},
+},
+['mb47_handguard_04'] = {
+	label = 'Mb47 Handguard #04',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_MB47_HANDGUARD_04'},
+		usetime = 2500
+	},
+},
+['mb47_handguard_05'] = {
+	label = 'Mb47 Handguard #05',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_MB47_HANDGUARD_05'},
+		usetime = 2500
+	},
+},
+['mb47_handguard_06'] = {
+	label = 'Mb47 Handguard #06',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_MB47_HANDGUARD_06'},
+		usetime = 2500
+	},
+},
+['mb47_handguard_07'] = {
+	label = 'Mb47 Handguard #07',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_MB47_HANDGUARD_07'},
+		usetime = 2500
+	},
+},
+['mb47_handguard_08'] = {
+	label = 'Mb47 Handguard #08',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_MB47_HANDGUARD_08'},
+		usetime = 2500
+	},
+},
+['mb47_handguard_09'] = {
+	label = 'Mb47 Handguard #09',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_MB47_HANDGUARD_09'},
+		usetime = 2500
+	},
+},
+['mb47_handguard_10'] = {
+	label = 'Mb47 Handguard #10',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_MB47_HANDGUARD_10'},
+		usetime = 2500
+	},
+},
+['kvr_barrel_1'] = {
+	label = 'Kvr Barrel #1',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_BARREL_1'},
+		usetime = 2500
+	},
+},
+['kvr_barrel_2'] = {
+	label = 'Kvr Barrel #2',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_BARREL_2'},
+		usetime = 2500
+	},
+},
+['kvr_barrel_3'] = {
+	label = 'Kvr Barrel #3',
+	weight = 200,
+	type = 'barrel',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_BARREL_3'},
+		usetime = 2500
+	},
+},
+['kvr_supp_1'] = {
+	label = 'Kvr Supp #1',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_SUPP_1'},
+		usetime = 2500
+	},
+},
+['kvr_supp_2'] = {
+	label = 'Kvr Supp #2',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_SUPP_2'},
+		usetime = 2500
+	},
+},
+['kvr_supp_3'] = {
+	label = 'Kvr Supp #3',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_SUPP_3'},
+		usetime = 2500
+	},
+},
+['kvr_supp_4'] = {
+	label = 'Kvr Supp #4',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_SUPP_4'},
+		usetime = 2500
+	},
+},
+['kvr_supp_5'] = {
+	label = 'Kvr Supp #5',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_SUPP_5'},
+		usetime = 2500
+	},
+},
+['kvr_supp_6'] = {
+	label = 'Kvr Supp #6',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_SUPP_6'},
+		usetime = 2500
+	},
+},
+['kvr_supp_7'] = {
+	label = 'Kvr Supp #7',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_SUPP_7'},
+		usetime = 2500
+	},
+},
+['kvr_supp_8'] = {
+	label = 'Kvr Supp #8',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_SUPP_8'},
+		usetime = 2500
+	},
+},
+['kvr_supp_9'] = {
+	label = 'Kvr Supp #9',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_SUPP_9'},
+		usetime = 2500
+	},
+},
+['kvr_handguard_1'] = {
+	label = 'Kvr Handguard #1',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_HANDGUARD_1'},
+		usetime = 2500
+	},
+},
+['kvr_handguard_2'] = {
+	label = 'Kvr Handguard #2',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_HANDGUARD_2'},
+		usetime = 2500
+	},
+},
+['kvr_handguard_3'] = {
+	label = 'Kvr Handguard #3',
+	weight = 200,
+	type = 'clip',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_HANDGUARD_3'},
+		usetime = 2500
+	},
+},
+['kvr_stock_1'] = {
+	label = 'Kvr Stock #1',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_STOCK_1'},
+		usetime = 2500
+	},
+},
+['kvr_stock_2'] = {
+	label = 'Kvr Stock #2',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_STOCK_2'},
+		usetime = 2500
+	},
+},
+['kvr_stock_3'] = {
+	label = 'Kvr Stock #3',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_STOCK_3'},
+		usetime = 2500
+	},
+},
+['kvr_stock_4'] = {
+	label = 'Kvr Stock #4',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_STOCK_4'},
+		usetime = 2500
+	},
+},
+['kvr_stock_5'] = {
+	label = 'Kvr Stock #5',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_STOCK_5'},
+		usetime = 2500
+	},
+},
+['kvr_stock_6'] = {
+	label = 'Kvr Stock #6',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_STOCK_6'},
+		usetime = 2500
+	},
+},
+['kvr_stock_7'] = {
+	label = 'Kvr Stock #7',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_STOCK_7'},
+		usetime = 2500
+	},
+},
+['kvr_stock_8'] = {
+	label = 'Kvr Stock #8',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODSKVR_STOCK_8'},
+		usetime = 2500
+	},
+},
+['shared_supp_14'] = {
+	label = 'Shared Suppressor #14 (Fits UBR, FMAS, VIRTUS, MB47)',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SUPP_14'},
+		usetime = 2500
+	},
+},
+['shared_supp_18'] = {
+	label = 'Shared Suppressor #18 (Fits UBR, FMAS, MB47)',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SUPP_18'},
+		usetime = 2500
+	},
+},
+['shared_supp_19'] = {
+	label = 'Shared Suppressor #19 (Fits UBR, FMAS, VIRTUS)',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SUPP_19'},
+		usetime = 2500
+	},
+},
+['shared_supp_21'] = {
+	label = 'Shared Suppressor #21 (Fits UBR, FMAS, VIRTUS)',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SUPP_21'},
+		usetime = 2500
+	},
+},
+['shared_supp_16'] = {
+	label = 'Shared Suppressor #16 (Fits UBR, FMAS)',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SUPP_16'},
+		usetime = 2500
+	},
+},
+['shared_scope_01_light'] = {
+	label = 'Shared Scope 01 Light (Fits UBR, FMAS, VIRTUS)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SCOPE_01_LIGHT'},
+		usetime = 2500
+	},
+},
+['shared_scope_02_light'] = {
+	label = 'Shared Scope 02 Light (Fits UBR, FMAS, VIRTUS)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SCOPE_02_LIGHT'},
+		usetime = 2500
+	},
+},
+['shared_scope_03_light'] = {
+	label = 'Shared Scope 03 Light (Fits UBR, FMAS, VIRTUS)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SCOPE_03_LIGHT'},
+		usetime = 2500
+	},
+},
+['shared_scope_04_light'] = {
+	label = 'Shared Scope 04 Light (Fits UBR, FMAS)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SCOPE_04_LIGHT'},
+		usetime = 2500
+	},
+},
+['shared_scope_05_light'] = {
+	label = 'Shared Scope 05 Light (Fits UBR, FMAS, VIRTUS)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SCOPE_05_LIGHT'},
+		usetime = 2500
+	},
+},
+['shared_scope_08_light'] = {
+	label = 'Shared Scope 08 Light (Fits UBR, FMAS, VIRTUS)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SCOPE_08_LIGHT'},
+		usetime = 2500
+	},
+},
+['shared_zoomscope_01_light'] = {
+	label = 'Shared Zoomscope 01 Light (Fits UBR, VIRTUS)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_ZOOMSCOPE_01_LIGHT'},
+		usetime = 2500
+	},
+},
+['shared_zoomscope_04_light'] = {
+	label = 'Shared Zoomscope 04 Light (Fits UBR, VIRTUS)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_ZOOMSCOPE_04_LIGHT'},
+		usetime = 2500
+	},
+},
+['shared_zoomscope_05_light'] = {
+	label = 'Shared Zoomscope 05 Light (Fits UBR)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_ZOOMSCOPE_05_LIGHT'},
+		usetime = 2500
+	},
+},
+['shared_zoomscope_06_light'] = {
+	label = 'Shared Zoomscope 06 Light (Fits UBR, VIRTUS)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_ZOOMSCOPE_06_LIGHT'},
+		usetime = 2500
+	},
+},
+['shared_zoomscope_07_light'] = {
+	label = 'Shared Zoomscope 07 Light (Fits UBR)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_ZOOMSCOPE_07_LIGHT'},
+		usetime = 2500
+	},
+},
+['shared_scope_06_light'] = {
+	label = 'Shared Scope 06 Light (Fits FMAS, VIRTUS)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SCOPE_06_LIGHT'},
+		usetime = 2500
+	},
+},
+['shared_grip_01'] = {
+	label = 'Shared Grip #01 (Fits FMAS, AGC, KVR)',
+	weight = 200,
+	type = 'grip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_GRIP_01'},
+		usetime = 2500
+	},
+},
+['shared_grip_03'] = {
+	label = 'Shared Grip #03 (Fits FMAS, AGC, KVR)',
+	weight = 200,
+	type = 'grip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_GRIP_03'},
+		usetime = 2500
+	},
+},
+['shared_grip_08'] = {
+	label = 'Shared Grip #08 (Fits FMAS, AGC, KVR)',
+	weight = 200,
+	type = 'grip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_GRIP_08'},
+		usetime = 2500
+	},
+},
+['shared_grip_09'] = {
+	label = 'Shared Grip #09 (Fits FMAS, KVR)',
+	weight = 200,
+	type = 'grip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_GRIP_09'},
+		usetime = 2500
+	},
+},
+['shared_grip_16'] = {
+	label = 'Shared Grip #16 (Fits FMAS, AGC, KVR)',
+	weight = 200,
+	type = 'grip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_GRIP_16'},
+		usetime = 2500
+	},
+},
+['shared_supp_03'] = {
+	label = 'Shared Suppressor #03 (Fits X17M, AGC, X19)',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SUPP_03'},
+		usetime = 2500
+	},
+},
+['shared_supp_04'] = {
+	label = 'Shared Suppressor #04 (Fits X17M, AGC, X19)',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SUPP_04'},
+		usetime = 2500
+	},
+},
+['shared_supp_20'] = {
+	label = 'Shared Suppressor #20 (Fits VIRTUS)',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SUPP_20'},
+		usetime = 2500
+	},
+},
+['shared_supp_22'] = {
+	label = 'Shared Suppressor #22 (Fits VIRTUS)',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SUPP_22'},
+		usetime = 2500
+	},
+},
+['shared_supp_10'] = {
+	label = 'Shared Suppressor #10 (Fits VIRTUS)',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SUPP_10'},
+		usetime = 2500
+	},
+},
+['shared_supp_13'] = {
+	label = 'Shared Suppressor #13 (Fits VIRTUS, MB47)',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SUPP_13'},
+		usetime = 2500
+	},
+},
+['shared_laser_01'] = {
+	label = 'Shared Laser #01 (Fits VIRTUS, AGC, MB47)',
+	weight = 200,
+	type = 'laser',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_LASER_01'},
+		usetime = 2500
+	},
+},
+['shared_laser_02'] = {
+	label = 'Shared Laser #02 (Fits VIRTUS, MB47)',
+	weight = 200,
+	type = 'laser',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_LASER_02'},
+		usetime = 2500
+	},
+},
+['shared_laser_03'] = {
+	label = 'Shared Laser #03 (Fits VIRTUS, MB47)',
+	weight = 200,
+	type = 'laser',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_LASER_03'},
+		usetime = 2500
+	},
+},
+['shared_laser_05'] = {
+	label = 'Shared Laser #05 (Fits VIRTUS, MB47)',
+	weight = 200,
+	type = 'laser',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_LASER_05'},
+		usetime = 2500
+	},
+},
+['shared_laser_07'] = {
+	label = 'Shared Laser #07 (Fits VIRTUS, AGC, MB47)',
+	weight = 200,
+	type = 'laser',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_LASER_07'},
+		usetime = 2500
+	},
+},
+['shared_laser_08'] = {
+	label = 'Shared Laser #08 (Fits VIRTUS, MB47)',
+	weight = 200,
+	type = 'laser',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_LASER_08'},
+		usetime = 2500
+	},
+},
+['shared_laser_09'] = {
+	label = 'Shared Laser #09 (Fits VIRTUS)',
+	weight = 200,
+	type = 'laser',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_LASER_09'},
+		usetime = 2500
+	},
+},
+['shared_flash_07'] = {
+	label = 'Shared Flashlight #07 (Fits VIRTUS, MB47)',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_FLASH_07'},
+		usetime = 2500
+	},
+},
+['shared_scope_07_light'] = {
+	label = 'Shared Scope 07 Light (Fits VIRTUS)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SCOPE_07_LIGHT'},
+		usetime = 2500
+	},
+},
+['shared_556mag_12'] = {
+	label = 'Shared 556mag #12 (Fits VIRTUS)',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_556MAG_12'},
+		usetime = 2500
+	},
+},
+['shared_556mag_11'] = {
+	label = 'Shared 556mag #11 (Fits VIRTUS)',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_556MAG_11'},
+		usetime = 2500
+	},
+},
+['shared_556mag_09'] = {
+	label = 'Shared 556mag #09 (Fits VIRTUS)',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_556MAG_09'},
+		usetime = 2500
+	},
+},
+['shared_556mag_08'] = {
+	label = 'Shared 556mag #08 (Fits VIRTUS)',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_556MAG_08'},
+		usetime = 2500
+	},
+},
+['shared_556mag_06'] = {
+	label = 'Shared 556mag #06 (Fits VIRTUS)',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_556MAG_06'},
+		usetime = 2500
+	},
+},
+['shared_556mag_05'] = {
+	label = 'Shared 556mag #05 (Fits VIRTUS)',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_556MAG_05'},
+		usetime = 2500
+	},
+},
+['shared_556mag_04'] = {
+	label = 'Shared 556mag #04 (Fits VIRTUS)',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_556MAG_04'},
+		usetime = 2500
+	},
+},
+['shared_556mag_03'] = {
+	label = 'Shared 556mag #03 (Fits VIRTUS)',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_556MAG_03'},
+		usetime = 2500
+	},
+},
+['shared_556mag_02'] = {
+	label = 'Shared 556mag #02 (Fits VIRTUS)',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_556MAG_02'},
+		usetime = 2500
+	},
+},
+['shared_556mag_01'] = {
+	label = 'Shared 556mag #01 (Fits VIRTUS)',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_556MAG_01'},
+		usetime = 2500
+	},
+},
+['shared_scope_01'] = {
+	label = 'Shared Scope #01 (Fits AGC, MB47, KVR)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SCOPE_01'},
+		usetime = 2500
+	},
+},
+['shared_scope_02'] = {
+	label = 'Shared Scope #02 (Fits AGC, KVR)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SCOPE_02'},
+		usetime = 2500
+	},
+},
+['shared_scope_05'] = {
+	label = 'Shared Scope #05 (Fits AGC, MB47, KVR)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SCOPE_05'},
+		usetime = 2500
+	},
+},
+['shared_scope_06'] = {
+	label = 'Shared Scope #06 (Fits AGC, KVR)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SCOPE_06'},
+		usetime = 2500
+	},
+},
+['shared_scope_07'] = {
+	label = 'Shared Scope #07 (Fits AGC, KVR)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SCOPE_07'},
+		usetime = 2500
+	},
+},
+['shared_scope_08'] = {
+	label = 'Shared Scope #08 (Fits AGC, MB47, KVR)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SCOPE_08'},
+		usetime = 2500
+	},
+},
+['shared_laser_04'] = {
+	label = 'Shared Laser #04 (Fits AGC)',
+	weight = 200,
+	type = 'laser',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_LASER_04'},
+		usetime = 2500
+	},
+},
+['shared_pflash_01'] = {
+	label = 'Shared Pflash #01 (Fits AGC, X19)',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_PFLASH_01'},
+		usetime = 2500
+	},
+},
+['shared_pflash_02'] = {
+	label = 'Shared Pflash #02 (Fits AGC, X19)',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_PFLASH_02'},
+		usetime = 2500
+	},
+},
+['shared_pflash_03'] = {
+	label = 'Shared Pflash #03 (Fits AGC, X19)',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_PFLASH_03'},
+		usetime = 2500
+	},
+},
+['shared_supp_02'] = {
+	label = 'Shared Suppressor #02 (Fits AGC, X19)',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SUPP_02'},
+		usetime = 2500
+	},
+},
+['shared_supp_05'] = {
+	label = 'Shared Suppressor #05 (Fits AGC, X19)',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SUPP_05'},
+		usetime = 2500
+	},
+},
+['shared_pflash_04'] = {
+	label = 'Shared Pflash #04 (Fits X19)',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_PFLASH_04'},
+		usetime = 2500
+	},
+},
+['shared_pflash_06'] = {
+	label = 'Shared Pflash #06 (Fits X19)',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_PFLASH_06'},
+		usetime = 2500
+	},
+},
+['shared_pflash_07'] = {
+	label = 'Shared Pflash #07 (Fits X19)',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_PFLASH_07'},
+		usetime = 2500
+	},
+},
+['shared_pflash_08'] = {
+	label = 'Shared Pflash #08 (Fits X19)',
+	weight = 200,
+	type = 'flashlight',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_PFLASH_08'},
+		usetime = 2500
+	},
+},
+['shared_762mag_1'] = {
+	label = 'Shared 762mag #1 (Fits MB47)',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_762MAG_1'},
+		usetime = 2500
+	},
+},
+['shared_762mag_2'] = {
+	label = 'Shared 762mag #2 (Fits MB47)',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_762MAG_2'},
+		usetime = 2500
+	},
+},
+['shared_762mag_3'] = {
+	label = 'Shared 762mag #3 (Fits MB47)',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_762MAG_3'},
+		usetime = 2500
+	},
+},
+['shared_762mag_4'] = {
+	label = 'Shared 762mag #4 (Fits MB47)',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_762MAG_4'},
+		usetime = 2500
+	},
+},
+['shared_762mag_5'] = {
+	label = 'Shared 762mag #5 (Fits MB47)',
+	weight = 200,
+	type = 'magazine',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_762MAG_5'},
+		usetime = 2500
+	},
+},
+['shared_stock_03'] = {
+	label = 'Shared Stock #03 (Fits MB47)',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_STOCK_03'},
+		usetime = 2500
+	},
+},
+['shared_stock_04'] = {
+	label = 'Shared Stock #04 (Fits MB47)',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_STOCK_04'},
+		usetime = 2500
+	},
+},
+['shared_stock_08'] = {
+	label = 'Shared Stock #08 (Fits MB47)',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_STOCK_08'},
+		usetime = 2500
+	},
+},
+['shared_stock_09'] = {
+	label = 'Shared Stock #09 (Fits MB47)',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_STOCK_09'},
+		usetime = 2500
+	},
+},
+['shared_stock_12'] = {
+	label = 'Shared Stock #12 (Fits MB47)',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_STOCK_12'},
+		usetime = 2500
+	},
+},
+['shared_stock_13'] = {
+	label = 'Shared Stock #13 (Fits MB47)',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_STOCK_13'},
+		usetime = 2500
+	},
+},
+['shared_stock_16'] = {
+	label = 'Shared Stock #16 (Fits MB47)',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_STOCK_16'},
+		usetime = 2500
+	},
+},
+['shared_stock_17'] = {
+	label = 'Shared Stock #17 (Fits MB47)',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_STOCK_17'},
+		usetime = 2500
+	},
+},
+['shared_stock_18'] = {
+	label = 'Shared Stock #18 (Fits MB47)',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_STOCK_18'},
+		usetime = 2500
+	},
+},
+['shared_stock_19'] = {
+	label = 'Shared Stock #19 (Fits MB47)',
+	weight = 200,
+	type = 'stock',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_STOCK_19'},
+		usetime = 2500
+	},
+},
+['shared_scope_03'] = {
+	label = 'Shared Scope #03 (Fits MB47, KVR)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SCOPE_03'},
+		usetime = 2500
+	},
+},
+['shared_scope_04'] = {
+	label = 'Shared Scope #04 (Fits MB47, KVR)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SCOPE_04'},
+		usetime = 2500
+	},
+},
+['shared_zoomscope_01'] = {
+	label = 'Shared Zoomscope #01 (Fits MB47, KVR)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_ZOOMSCOPE_01'},
+		usetime = 2500
+	},
+},
+['shared_zoomscope_03'] = {
+	label = 'Shared Zoomscope #03 (Fits MB47)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_ZOOMSCOPE_03'},
+		usetime = 2500
+	},
+},
+['shared_zoomscope_04'] = {
+	label = 'Shared Zoomscope #04 (Fits MB47)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_ZOOMSCOPE_04'},
+		usetime = 2500
+	},
+},
+['shared_zoomscope_06'] = {
+	label = 'Shared Zoomscope #06 (Fits MB47)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_ZOOMSCOPE_06'},
+		usetime = 2500
+	},
+},
+['shared_zoomscope_11'] = {
+	label = 'Shared Zoomscope #11 (Fits MB47)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_ZOOMSCOPE_11'},
+		usetime = 2500
+	},
+},
+['shared_muzzle_08'] = {
+	label = 'Shared Muzzle #08 (Fits MB47)',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_MUZZLE_08'},
+		usetime = 2500
+	},
+},
+['shared_muzzle_09'] = {
+	label = 'Shared Muzzle #09 (Fits MB47)',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_MUZZLE_09'},
+		usetime = 2500
+	},
+},
+['shared_supp_12'] = {
+	label = 'Shared Suppressor #12 (Fits MB47)',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SUPP_12'},
+		usetime = 2500
+	},
+},
+['shared_supp_09'] = {
+	label = 'Shared Suppressor #09 (Fits MB47)',
+	weight = 200,
+	type = 'muzzle',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_SUPP_09'},
+		usetime = 2500
+	},
+},
+['shared_grip_07'] = {
+	label = 'Shared Grip #07 (Fits KVR)',
+	weight = 200,
+	type = 'grip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_GRIP_07'},
+		usetime = 2500
+	},
+},
+['shared_grip_17'] = {
+	label = 'Shared Grip #17 (Fits KVR)',
+	weight = 200,
+	type = 'grip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_GRIP_17'},
+		usetime = 2500
+	},
+},
+['shared_grip_19'] = {
+	label = 'Shared Grip #19 (Fits KVR)',
+	weight = 200,
+	type = 'grip',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_GRIP_19'},
+		usetime = 2500
+	},
+},
+['shared_zoomscope_02'] = {
+	label = 'Shared Zoomscope #02 (Fits KVR)',
+	weight = 200,
+	type = 'scope',
+	client = {
+		component = {'COMPONENT_MARKOMODS_SHARED_ZOOMSCOPE_02'},
+		usetime = 2500
+	},
+},
 	},
 
 	Ammo = {
