@@ -178,10 +178,8 @@ Config.WeaponClassBindings = {
 	[`WEAPON_L5`] = Config.WeaponClasses["SMALL_CALIBER"],
 	[`WEAPON_REVOLVER`] = Config.WeaponClasses["SMALL_CALIBER"],
 	[`WEAPON_REVOLVER_MK2`] = Config.WeaponClasses["SMALL_CALIBER"],
-	[`WEAPON_L5`] = Config.WeaponClasses["SMALL_CALIBER"],
 	[`WEAPON_2011`] = Config.WeaponClasses["SMALL_CALIBER"],
 	[`WEAPON_38SNUBNOSE`] = Config.WeaponClasses["SMALL_CALIBER"],
-	[`WEAPON_38SNUBNOSE2`] = Config.WeaponClasses["SMALL_CALIBER"],
 	[`WEAPON_38SNUBNOSE2`] = Config.WeaponClasses["SMALL_CALIBER"],
 	[`WEAPON_38SPECIAL`] = Config.WeaponClasses["SMALL_CALIBER"],
 	[`WEAPON_44MAGNUM`] = Config.WeaponClasses["SMALL_CALIBER"],
@@ -240,7 +238,6 @@ Config.WeaponClassBindings = {
 	[`WEAPON_AK74`] = Config.WeaponClasses["HIGH_CALIBER"],
 	[`WEAPON_AK47`] = Config.WeaponClasses["HIGH_CALIBER"],
 	[`WEAPON_SA80`] = Config.WeaponClasses["HIGH_CALIBER"],
-	[`WEAPON_MB47`] = Config.WeaponClasses["HIGH_CALIBER"],
 	[`WEAPON_G36`] = Config.WeaponClasses["HIGH_CALIBER"],
 	[`WEAPON_M249`] = Config.WeaponClasses["HIGH_CALIBER"],
 	[`WEAPON_FM1_HK416`] = Config.WeaponClasses["HIGH_CALIBER"],
@@ -259,6 +256,15 @@ Config.WeaponClassBindings = {
 	[`WEAPON_NSR9`] = Config.WeaponClasses["HIGH_CALIBER"],
 	[`WEAPON_PM4`] = Config.WeaponClasses["HIGH_CALIBER"],
 	[`WEAPON_RFB`] = Config.WeaponClasses["HIGH_CALIBER"],
+	-- Marko Mods
+	[`WEAPON_UBR_OG`] = Config.WeaponClasses["HIGH_CALIBER"],
+	[`WEAPON_UBR_MODERN`] = Config.WeaponClasses["HIGH_CALIBER"],
+	[`WEAPON_UBR_CQB`] = Config.WeaponClasses["HIGH_CALIBER"],
+	[`WEAPON_FMAS`] = Config.WeaponClasses["HIGH_CALIBER"],
+	[`WEAPON_DRAGON`] = Config.WeaponClasses["HIGH_CALIBER"],
+	[`WEAPON_DRAGON_GOLD`] = Config.WeaponClasses["HIGH_CALIBER"],
+	[`WEAPON_VIRTUS_1`] = Config.WeaponClasses["HIGH_CALIBER"],
+	[`WEAPON_MB47`] = Config.WeaponClasses["HIGH_CALIBER"],
 
 	--[[ Shotguns ]]
 	--
@@ -296,9 +302,9 @@ Config.WeaponClassBindings = {
 	--[`WEAPON_BRIEFCASE`] = Config.WeaponClasses['LIGHT_IMPACT'], -- Briefcase
 	--[`WEAPON_BRIEFCASE_02`] = Config.WeaponClasses['LIGHT_IMPACT'], -- Briefcase 2
 	--[`WEAPON_BALL`] = Config.WeaponClasses['LIGHT_IMPACT'],
-	--[`WEAPON_FLASHLIGHT`] = Config.WeaponClasses['LIGHT_IMPACT'],
+	[`WEAPON_FLASHLIGHT`] = Config.WeaponClasses['LIGHT_IMPACT'],
 	[`WEAPON_KNUCKLE`] = Config.WeaponClasses["LIGHT_IMPACT"],
-	--[`WEAPON_NIGHTSTICK`] = Config.WeaponClasses['LIGHT_IMPACT'],
+	[`WEAPON_NIGHTSTICK`] = Config.WeaponClasses['LIGHT_IMPACT'],
 	[`WEAPON_SNOWBALL`] = Config.WeaponClasses['LIGHT_IMPACT'],
 	--[`WEAPON_UNARMED`] = Config.WeaponClasses['LIGHT_IMPACT'],
 	--[`WEAPON_PARACHUTE`] = Config.WeaponClasses['LIGHT_IMPACT'],
