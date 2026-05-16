@@ -88,25 +88,13 @@ function RegisterCallbacks()
 	-- }, 2)
 
 	exports["pulsar-core"]:RegisterServerCallback("Pwnzor:GetEvents", function(source, data, cb)
-		if not exports['pulsar-pwnzor']:Get(source, "GetEvents") then
-			exports['pulsar-pwnzor']:Set(source, "GetEvents")
-			cb(_blacklistedClientEvents)
-		else
-			if not exports['pulsar-core']:FetchSource(source).Permissions:IsAdmin() then
-				exports['pulsar-core']:PunishmentBanSource(source, -1, "Attempt To Recall GetEvents", "Pwnzor")
-			end
-		end
+		exports['pulsar-pwnzor']:Set(source, "GetEvents")
+		cb(_blacklistedClientEvents)
 	end)
 
 	exports["pulsar-core"]:RegisterServerCallback("Pwnzor:GetCommands", function(source, data, cb)
-		if not exports['pulsar-pwnzor']:Get(source, "GetCommands") then
-			exports['pulsar-pwnzor']:Set(source, "GetCommands")
-			cb(_blacklistedCommands)
-		else
-			if not exports['pulsar-core']:FetchSource(source).Permissions:IsAdmin() then
-				exports['pulsar-core']:PunishmentBanSource(source, -1, "Attempt To Recall GetCommands", "Pwnzor")
-			end
-		end
+		exports['pulsar-pwnzor']:Set(source, "GetCommands")
+		cb(_blacklistedCommands)
 	end)
 
 	exports["pulsar-core"]:RegisterServerCallback("Pwnzor:AFK", function(source, data, cb)

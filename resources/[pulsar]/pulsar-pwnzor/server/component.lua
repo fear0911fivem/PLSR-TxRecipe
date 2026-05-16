@@ -317,6 +317,9 @@ exports('Get', function(source, key)
 end)
 
 exports('Set', function(source, key)
+  if _players[source] == nil then
+    _players[source] = {}
+  end
   _players[source][key] = true
 end)
 
