@@ -5,24 +5,24 @@ local _policeCustomSettings = {
 }
 
 _customsLocations = {
-	-- {
-	-- 	type = 0,
-	-- 	name = "Benny's Motorworks",
-	-- 	restrictClass = false,
-	-- 	restrictJobs = {
-	-- 		police = false, -- Don't allow Police
-	-- 	},
-	-- 	blip = vector3(-201.5160, -1327.0680, 31.3005),
-	-- 	zone = {
-	-- 		type = "box",
-	-- 		center = vector3(-31.88, -1052.1, 28.39),
-	-- 		length = 27.4,
-	-- 		width = 19.0,
-	-- 		heading = 260,
-	-- 		minZ = 27.2,
-	-- 		maxZ = 32.0,
-	-- 	},
-	-- },
+	--[[{
+		type = 0,
+		name = "Benny's Motorworks",
+		restrictClass = false,
+		restrictJobs = {
+			police = false, -- Don't allow Police
+		},
+		blip = vector3(-201.5160, -1327.0680, 31.3005),
+		zone = {
+			type = "box",
+			center = vector3(-31.88, -1052.1, 28.39),
+			length = 27.4,
+			width = 19.0,
+			heading = 260,
+			minZ = 27.2,
+			maxZ = 32.0,
+		},
+	},--]]
 	{
 		type = 0,
 		name = "Beekers Garage",
@@ -60,58 +60,58 @@ _customsLocations = {
 			maxZ = 25.92,
 		},
 	},
-	-- { -- east side lsc
-	-- 	type = 1, -- Repairs Only
-	-- 	name = "Garage",
-	-- 	restrictClass = false,
-	-- 	restrictJobs = {
-	-- 		police = false, -- Don't allow Police
-	-- 	},
-	-- 	blip = false,
-	-- 	zone = {
-	-- 		type = "box",
-	-- 		center = vector3(732.48, -1077.76, 22.17),
-	-- 		length = 13.8,
-	-- 		width = 6.6,
-	-- 		heading = 0,
-	-- 		minZ = 21.17,
-	-- 		maxZ = 25.17,
-	-- 	},
-	-- },
-	-- { -- hidden garage in del perro
-	-- 	type = 1, -- Repairs Only
-	-- 	name = "Garage",
-	-- 	restrictClass = false,
-	-- 	restrictJobs = {
-	-- 		police = false, -- Don't allow Police
-	-- 	},
-	-- 	blip = false,
-	-- 	zone = {
-	-- 		type = "box",
-	-- 		center = vector3(-1358.27, -755.96, 22.3),
-	-- 		length = 5.0,
-	-- 		width = 5.0,
-	-- 		heading = 35,
-	-- 		minZ = 21.3,
-	-- 		maxZ = 25.3,
-	-- 	},
-	-- },
-	-- { -- autopia pwkway / mba
-	-- 	type = 1, -- Repairs Only
-	-- 	name = "Garage",
-	-- 	restrictClass = false,
-	-- 	restrictJobs = false,
-	-- 	blip = false,
-	-- 	zone = {
-	-- 		type = "box",
-	-- 		center = vector3(-442.3, -2179.46, 9.73),
-	-- 		length = 8.0,
-	-- 		width = 9.0,
-	-- 		heading = 0,
-	-- 		minZ = 8.73,
-	-- 		maxZ = 12.73,
-	-- 	},
-	-- },
+	--[[{ -- east side lsc
+		type = 1, -- Repairs Only
+		name = "Garage",
+		restrictClass = false,
+		restrictJobs = {
+			police = false, -- Don't allow Police
+		},
+		blip = false,
+		zone = {
+			type = "box",
+		center = vector3(732.48, -1077.76, 22.17),
+			length = 13.8,
+			width = 6.6,
+			heading = 0,
+			minZ = 21.17,
+			maxZ = 25.17,
+		},
+	},
+	{ -- hidden garage in del perro
+		type = 1, -- Repairs Only
+		name = "Garage",
+		restrictClass = false,
+		restrictJobs = {
+			police = false, -- Don't allow Police
+		},
+		blip = false,
+		zone = {
+			type = "box",
+			center = vector3(-1358.27, -755.96, 22.3),
+			length = 5.0,
+			width = 5.0,
+			heading = 35,
+			minZ = 21.3,
+			maxZ = 25.3,
+		},
+	},
+	{ -- autopia pwkway / mba
+		type = 1, -- Repairs Only
+		name = "Garage",
+		restrictClass = false,
+		restrictJobs = false,
+		blip = false,
+		zone = {
+			type = "box",
+			center = vector3(-442.3, -2179.46, 9.73),
+			length = 8.0,
+			width = 9.0,
+			heading = 0,
+			minZ = 8.73,
+			maxZ = 12.73,
+		},
+	},--]]
 	{ -- Pegasus Hangar
 		type = 0,
 		name = "Aircraft Customs",
@@ -167,7 +167,7 @@ _customsLocations = {
 		},
 		settings = _policeCustomSettings,
 	},
-	{
+	--[[{
 		type = 0,
 		name = "Guardius Garage",
 		restrictClass = { 18 },
@@ -188,7 +188,7 @@ _customsLocations = {
 			maxZ = 34.91,
 		},
 		settings = _policeCustomSettings,
-	},
+	},--]]
 	{
 		type = 0,
 		name = "Sandy Sheriff Garage",
