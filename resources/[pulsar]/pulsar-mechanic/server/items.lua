@@ -1,5 +1,7 @@
+--- Registers ox_inventory use handlers for all repair parts and performance upgrade items
+---@return nil
 function RegisterMechanicItems()
-    for k, v in pairs(_mechanicItemsToParts) do
+    for k, v in pairs(Config.ItemsToParts) do
         exports.ox_inventory:RegisterUse(k, 'Mechanic', function(source, itemData)
             exports["pulsar-core"]:ClientCallback(source, 'Mechanic:StartInstall', {
                 part = itemData.Name,
@@ -13,9 +15,9 @@ function RegisterMechanicItems()
         end)
     end
 
-    for k, v in pairs(_mechanicItemsToUpgrades) do
+    for k, v in pairs(Config.ItemsToUpgrades) do
         exports.ox_inventory:RegisterUse(k, 'Mechanic', function(source, itemData)
-            local partData = _mechanicItemsToUpgrades[itemData.Name]
+            local partData = Config.ItemsToUpgrades[itemData.Name]
 
             if partData then
                 exports["pulsar-core"]:ClientCallback(source, 'Mechanic:StartUpgradeInstall', partData,

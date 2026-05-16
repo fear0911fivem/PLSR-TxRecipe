@@ -1,7 +1,10 @@
+--- Registers all server callbacks for the mechanic system
+-- Mechanic:InstallMultipleRepairParts validates item ownership
+---@return nil
 function RegisterCallbacks()
 	exports["pulsar-core"]:RegisterServerCallback("Mechanic:InstallMultipleRepairParts", function(source, data, cb)
 		local char = exports['pulsar-characters']:FetchCharacterSource(source)
-		if char and data?.part and data?.quantity and _mechanicItemsToParts[data.part] then
+		if char and data?.part and data?.quantity and Config.ItemsToParts[data.part] then
 			if exports.ox_inventory:ItemsHas(char:GetData("SID"), 1, data.part, data.quantity) then
 				exports["pulsar-core"]:ClientCallback(source, "Mechanic:StartInstall", data, function(success)
 					if success then

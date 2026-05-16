@@ -1,5 +1,9 @@
+--- Creates polyzone and box zones for all mechanic shops defined in Config.Shops
+-- Zones carry mechanic_zone and mechanic_zone_job metadata used by GetMechanicZoneAtCoords
+---@return nil
 function CreateMechanicZones()
-    for k, v in ipairs(_mechanicShops) do
+    for k = 1, #Config.Shops do
+        local v = Config.Shops[k]
         if v.zone then
             local data = {
                 mechanic_zone = true,
@@ -16,6 +20,10 @@ function CreateMechanicZones()
     end
 end
 
+--- Returns whether the given coords fall inside a mechanic zone and which job owns that zone
+---@param coords vector3 World coordinates to test
+---@return boolean true if inside a mechanic zone, false otherwise
+---@return string|nil job name of the zone, or nil if not inside one
 function GetMechanicZoneAtCoords(coords)
     local insideZone = exports['pulsar-polyzone']:IsCoordsInZone(coords, false, 'mechanic_zone')
     if insideZone and insideZone.mechanic_zone and insideZone.mechanic_zone_job then

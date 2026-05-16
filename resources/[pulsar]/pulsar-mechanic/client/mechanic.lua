@@ -11,8 +11,8 @@ AddEventHandler('onClientResourceStart', function(resource)
 			local quantity = data.quantity
 			if part and quantity and LocalPlayer.state.loggedIn and not _repairingVehicle and type(quantity) == "number" and quantity > 0 then
 				local duty = LocalPlayer.state.onDuty
-				if duty and _mechanicJobs[duty] then
-					local installingPartData = _mechanicItemsToParts[part]
+				if duty and Config.Jobs[duty] then
+					local installingPartData = Config.ItemsToParts[part]
 					local playerCoords = GetEntityCoords(PlayerPedId())
 					local maxDistance = 5.0
 					local includePlayerVehicle = false
@@ -40,7 +40,7 @@ AddEventHandler('onClientResourceStart', function(resource)
 
 						local requiresHighGradeParts = false
 						if vehClass then
-							requiresHighGradeParts = _highPerformanceClasses[vehClass]
+							requiresHighGradeParts = Config.HighPerformanceClasses[vehClass]
 						end
 
 						if
@@ -125,7 +125,7 @@ AddEventHandler('onClientResourceStart', function(resource)
 		exports["pulsar-core"]:RegisterClientCallback("Mechanic:StartUpgradeInstall", function(part, cb)
 			if LocalPlayer.state.loggedIn and not _repairingVehicle then
 				local duty = LocalPlayer.state.onDuty
-				if duty and _mechanicJobs[duty] then
+				if duty and Config.Jobs[duty] then
 					local playerCoords = GetEntityCoords(PlayerPedId())
 					local maxDistance = 5.0
 					local includePlayerVehicle = false
@@ -238,7 +238,7 @@ AddEventHandler('onClientResourceStart', function(resource)
 		exports["pulsar-core"]:RegisterClientCallback("Mechanic:StartUpgradeRemoval", function(part, cb)
 			if LocalPlayer.state.loggedIn and not _repairingVehicle then
 				local duty = LocalPlayer.state.onDuty
-				if duty and _mechanicJobs[duty] then
+				if duty and Config.Jobs[duty] then
 					local playerCoords = GetEntityCoords(PlayerPedId())
 					local maxDistance = 5.0
 					local includePlayerVehicle = false
@@ -349,10 +349,13 @@ RegisterNetEvent("Mechanic:Client:ForcePerformanceProperty", function(vehicle, m
 	end
 end)
 
+--- Returns whether the local player can access the given vehicle as an on-duty mechanic
+---@param vehicle number Vehicle entity handle to check access for
+---@return boolean true if the player is on duty and the vehicle is in their shop zone
 exports("CanAccessVehicleAsMechanic", function(vehicle)
 	local vehCoords = GetEntityCoords(vehicle)
 	local myDuty = LocalPlayer.state.onDuty
-	if myDuty and _mechanicJobs[myDuty] then
+	if myDuty and Config.Jobs[myDuty] then
 		local inMechanicZone, mechanicZone = GetMechanicZoneAtCoords(vehCoords)
 		if inMechanicZone and mechanicZone == myDuty then
 			return true
@@ -426,6 +429,9 @@ end)
 --     SetEntityLodDist(lol, 50)
 -- end)
 
+--- Blocks until the given model hash is fully loaded into memory
+---@param model number Model hash to request and wait for
+---@return nil
 function loadModel(model)
 	if IsModelInCdimage(model) then
 		while not HasModelLoaded(model) do
