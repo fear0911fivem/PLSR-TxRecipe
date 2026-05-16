@@ -1,3 +1,48 @@
+exports("PunishmentCheckBanTokens", function(tokens)
+	if not tokens or #tokens == 0 then return nil end
+
+	local p = promise.new()
+
+	exports.oxmysql:execute(
+		'SELECT * FROM bans WHERE active = 1 AND tokens IS NOT NULL AND tokens != \'null\'',
+		{},
+		function(results)
+			if not results or #results == 0 then
+				p:resolve(nil)
+				return
+			end
+
+			local tokenSet = {}
+			for k = 1, #tokens do
+				tokenSet[tokens[k]] = true
+			end
+
+			for k = 1, #results do
+				local row = results[k]
+				if row.expires ~= -1 and row.expires < os.time() then
+					exports.oxmysql:execute('UPDATE bans SET active = 0 WHERE id = ?', { row.id }, function() end)
+				else
+					local stored = json.decode(row.tokens)
+					if stored then
+						for j = 1, #stored do
+							if tokenSet[stored[j]] then
+								if row.unbanned then row.unbanned = json.decode(row.unbanned) end
+								row._id = row.id
+								p:resolve(row)
+								return
+							end
+						end
+					end
+				end
+			end
+
+			p:resolve(nil)
+		end
+	)
+
+	return Citizen.Await(p)
+end)
+
 exports("PunishmentCheckBan", function(key, value)
 	local p = promise.new()
 
@@ -709,6 +754,15 @@ exports("PunishmentActionsBan",
 	function(tSource, tAccount, tIdentifier, tName, tTokens, reason, expires, expStr, issuer, issuerId, mask)
 		local p = promise.new()
 
+				if (not tTokens or #tTokens == 0) and tSource then
+			tTokens = {}
+			for i = 0, GetNumPlayerTokens(tSource) - 1 do
+				table.insert(tTokens, GetPlayerToken(tSource, i))
+			end
+		end
+
+		tAccount = tonumber(tAccount)
+
 		local whereConditions = { "active = 1" }
 		local params = {}
 
@@ -732,8 +786,8 @@ exports("PunishmentActionsBan",
 				exports.oxmysql:execute(
 					'UPDATE bans SET account = ?, identifier = ?, expires = ?, reason = ?, issuer = ?, active = 1, started = ?, tokens = ? WHERE id = ?',
 					{ tAccount, tIdentifier, expires, reason, issuer, os.time(), tokensJson, banId },
-					function(affectedRows)
-						if affectedRows > 0 then
+					function(result)
+						if result and result.affectedRows > 0 then
 							p:resolve(true)
 							handleBanResult(banId, tSource, reason, expires, expStr, mask)
 						else

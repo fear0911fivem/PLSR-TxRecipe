@@ -1,7 +1,7 @@
 fx_version("cerulean")
 games({ "gta5" })
 lua54("yes")
-version "1.0.4"
+version "1.0.7"
 repository("https://www.github.com/PulsarFW/pulsar-core")
 server_script("@oxmysql/lib/MySQL.lua")
 client_script("@pulsar-pwnzor/client/check.lua")
