@@ -1809,20 +1809,25 @@ end)
 
 lib.callback.register('ox_inventory:startCrafting', function(id, recipe)
 	recipe = CraftingBenches[id].items[recipe]
-
-	return lib.progressCircle({
-		label = locale('crafting_item', recipe.metadata?.label or Items[recipe.name].label),
-		duration = recipe.duration or 3000,
+local p = promise.new()
+	exports['pulsar-hud']:Progress({
+		name      = 'ox_crafting',
+		duration  = recipe.duration or 3000,
+		label     = locale('crafting_item', recipe.metadata?.label or Items[recipe.name].label),
 		canCancel = true,
-		disable = {
-			move = true,
-			combat = true,
+		controlDisables = {
+			disableMovement    = true,
+			disableCarMovement = true,
+			disableMouse       = false,
+			disableCombat      = true,
 		},
-		anim = {
-			dict = 'anim@amb@clubhouse@tutorial@bkr_tut_ig3@',
-			clip = 'machinic_loop_mechandplayer',
-		}
-	})
+		animation = {
+			anim = 'mechanic',
+		},
+	}, function(cancelled)
+		p:resolve(not cancelled)
+	end)
+	return Citizen.Await(p)
 end)
 
 local swapActive = false

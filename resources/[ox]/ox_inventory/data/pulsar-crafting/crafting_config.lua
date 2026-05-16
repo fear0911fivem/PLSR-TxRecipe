@@ -78,6 +78,60 @@ return {
 		},
 	},
 	{
+		label = "Material Refiner",
+		targetConfig = {
+			actionString = "Refining",
+			icon = "minimize",
+			model = "gr_prop_gr_lathe_01a",
+		},
+		location = { x = -582.435, y = -1612.158, z = 26.011, h = 86.292 },
+		restriction = {
+			shared = true,
+		},
+		recipes = {
+			{
+				result = { name = "refined_metal", count = 1 },
+				items = { { name = "scrapmetal", count = 1000 } },
+				time = 0,
+			},
+			{
+				result = { name = "refined_iron", count = 1 },
+				items = { { name = "ironbar", count = 1000 } },
+				time = 0,
+			},
+			{
+				result = { name = "refined_copper", count = 1 },
+				items = { { name = "copperwire", count = 1000 } },
+				time = 0,
+			},
+			{
+				result = { name = "refined_plastic", count = 1 },
+				items = { { name = "plastic", count = 1000 } },
+				time = 0,
+			},
+			{
+				result = { name = "refined_glue", count = 1 },
+				items = { { name = "heavy_glue", count = 1000 } },
+				time = 0,
+			},
+			{
+				result = { name = "refined_glue", count = 1 },
+				items = { { name = "glue", count = 1000 } },
+				time = 0,
+			},
+			{
+				result = { name = "refined_electronics", count = 1 },
+				items = { { name = "electronic_parts", count = 1000 } },
+				time = 0,
+			},
+			{
+				result = { name = "refined_rubber", count = 1 },
+				items = { { name = "rubber", count = 1000 } },
+				time = 0,
+			},
+		},
+	},
+	{
         label = "Crafting Bench",
         targetConfig = {
             actionString = "Crafting",

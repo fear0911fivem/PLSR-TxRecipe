@@ -113,4 +113,17 @@ return {
 		metalic = false,
 		weight = 2.0,
 	},
+	{
+		name = "cow_bait",
+		label = "Cow Bait",
+		iconOverride = "hunting_bait",
+		price = 100,
+		isUsable = true,
+		isStackable = 20,
+		type = 7,
+		rarity = 5,
+		closeUi = true,
+		metalic = false,
+		weight = 2.0,
+	},
 }

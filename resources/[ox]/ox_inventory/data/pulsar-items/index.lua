@@ -35,6 +35,10 @@ local files = {
     'data.pulsar-items.weapons.bullets',
     'data.pulsar-items.weapons.attachments',
     'data.pulsar-items.weapons.bobcat',
+    'data.pulsar-items.signs',
+    'data.pulsar-items.erp',
+    'data.pulsar-items.food.rustybrowns',
+    'data.pulsar-items.food.taco',
 }
 
 local all = {}
