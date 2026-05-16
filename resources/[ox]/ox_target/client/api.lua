@@ -44,6 +44,10 @@ end
 function api.addPolyZone(data)
     if data.debug then utils.warn('Creating new PolyZone with debug enabled.') end
 
+    if type(data.id) == 'string' then
+        data.name = data.id
+        api.removeZone(data.id, true)
+    end
     data.resource = GetInvokingResource()
     data.options = checkOptions(data.options)
     return lib.zones.poly(data).id
@@ -54,6 +58,10 @@ end
 function api.addBoxZone(data)
     if data.debug then utils.warn('Creating new BoxZone with debug enabled.') end
 
+    if type(data.id) == 'string' then
+        data.name = data.id
+        api.removeZone(data.id, true)
+    end
     data.resource = GetInvokingResource()
     data.options = checkOptions(data.options)
     return lib.zones.box(data).id
@@ -64,6 +72,10 @@ end
 function api.addSphereZone(data)
     if data.debug then utils.warn('Creating new SphereZone with debug enabled.') end
 
+    if type(data.id) == 'string' then
+        data.name = data.id
+        api.removeZone(data.id, true)
+    end
     data.resource = GetInvokingResource()
     data.options = checkOptions(data.options)
     return lib.zones.sphere(data).id
@@ -72,12 +84,14 @@ end
 ---@param id number | string The ID of the zone to check. It can be either a number or a string representing the zone's index or name, respectively.
 ---@return boolean returns true if the zone with the specified ID exists, otherwise false.
 function api.zoneExists(id)
-    if not Zones or (type(id) ~= 'number' and type(id) ~= 'string') then return false end
+    if type(id) ~= 'number' and type(id) ~= 'string' then return false end
 
-    if type(id) == 'number' and Zones[id] then return true end
+    local allZones = lib.zones.getAllZones()
 
-    for _, zone in pairs(lib.zones.getAllZones()) do
-        if type(id) == 'string' and zone.name == id then return true end
+    if type(id) == 'number' then return allZones[id] ~= nil end
+
+    for _, zone in pairs(allZones) do
+        if zone.name == id then return true end
     end
 
     return false
@@ -86,21 +100,21 @@ end
 ---@param id number | string
 ---@param suppressWarning boolean?
 function api.removeZone(id, suppressWarning)
-    if Zones then
-        if type(id) == 'string' then
-            local foundZone
+    local allZones = lib.zones.getAllZones()
 
-            for _, v in pairs(lib.zones.getAllZones()) do
-                if v.name == id then
-                    foundZone = true
-                    v:remove()
-                end
+    if type(id) == 'string' then
+        local foundZone
+
+        for _, v in pairs(allZones) do
+            if v.name == id then
+                foundZone = true
+                v:remove()
             end
-
-            if foundZone then return end
-        elseif Zones[id] then
-            return Zones[id]:remove()
         end
+
+        if foundZone then return end
+    elseif allZones[id] then
+        return allZones[id]:remove()
     end
 
     if suppressWarning then return end
@@ -415,12 +429,14 @@ AddEventHandler('onClientResourceStop', function(resource)
     removeResourceGlobals(resource, { peds, vehicles, objects, players })
     removeResourceTargets(resource, { models, entities, localEntities })
 
-    if Zones then
-        for _, v in pairs(Zones) do
-            if v.resource == resource then
-                v:remove()
-            end
+    local toRemove = {}
+    for _, v in pairs(lib.zones.getAllZones()) do
+        if v.resource == resource then
+            toRemove[#toRemove + 1] = v
         end
+    end
+    for i = 1, #toRemove do
+        toRemove[i]:remove()
     end
 end)
 

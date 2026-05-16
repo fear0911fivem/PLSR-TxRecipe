@@ -441,9 +441,6 @@ Config.VehicleMenu = {
     },
     {
         icon = "trash",
-        isEnabled = function(data, entityData)
-            return utils.isNearTrunk(entityData.entity, 4.0, true)
-        end,
         text = "Toss Garbage",
         event = "Garbage:Client:TossBag",
         model = `trash2`,
@@ -888,24 +885,6 @@ Config.VehicleMenu = {
         minDist = 2.0,
     },
     {
-        icon = "hand",
-        isEnabled = function(data, entityData)
-            return utils.isNearTrunk(entityData.entity, 4.0, true)
-        end,
-        text = "Grab Loot",
-        event = "Robbery:Client:MoneyTruck:GrabLoot",
-        model = `stockade`,
-        data = {},
-        minDist = 10.0,
-        isEnabled = function(data, entity)
-            local entState = Entity(entity.entity).state
-            return not entState.beingLooted
-                and entState.wasThermited
-                and not entState.wasLooted
-                and GetEntityHealth(entity.entity) > 0
-        end,
-    },
-    {
         icon = "car-garage",
         isEnabled = function(data, entityData)
             local inZone = exports['pulsar-polyzone']:IsCoordsInZone(GetEntityCoords(entityData.entity), false,
@@ -921,6 +900,22 @@ Config.VehicleMenu = {
         permissionKey = "dealership_buyback",
     },
 }
+
+exports.ox_target:addModel(`stockade`, {
+    name = "Robbery:Client:MoneyTruck:GrabLoot_hand",
+    icon = "fas fa-hand",
+    label = "Grab Loot",
+    event = "Robbery:Client:MoneyTruck:GrabLoot",
+    data = {},
+    distance = 10.0,
+    canInteract = function(entity)
+        local entState = Entity(entity).state
+        return not entState.beingLooted
+            and entState.wasThermited
+            and not entState.wasLooted
+            and GetEntityHealth(entity) > 0
+    end,
+})
 
 for _, menuItem in ipairs(Config.VehicleMenu) do
     if menuItem.icon and (menuItem.text or menuItem.textFunc) and menuItem.event then
