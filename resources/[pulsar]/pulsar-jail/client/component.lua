@@ -182,7 +182,7 @@ AddEventHandler('onClientResourceStart', function(resource)
 
 			exports['pulsar-phone']:Close()
 			exports['pulsar-hud']:InteractionHide()
-			exports.ox_inventory:CloseAll()
+			exports.ox_inventory:closeInventory()
 
 			DoScreenFadeOut(1000)
 			while not IsScreenFadedOut() do
