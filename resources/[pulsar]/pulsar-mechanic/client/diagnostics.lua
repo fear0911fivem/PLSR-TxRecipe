@@ -18,7 +18,7 @@ AddEventHandler("Mechanic:Client:RunDiagnostics", function(entityData)
 		local requiresTypeShit = "regular"
 		if vehClass then
 			requiresTypeShit = "hperformance"
-			requiresHighGradeParts = _highPerformanceClasses[vehClass]
+			requiresHighGradeParts = Config.HighPerformanceClasses[vehClass]
 		end
 
 		local menu = {
@@ -52,7 +52,7 @@ AddEventHandler("Mechanic:Client:RunDiagnostics", function(entityData)
 			if vehDamage and vehDamage[k] then
 				local partData
 
-				for partId, part in pairs(_mechanicItemsToParts) do
+				for partId, part in pairs(Config.ItemsToParts) do
 					if
 						part.part == k
 						and (
