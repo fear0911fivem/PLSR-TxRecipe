@@ -41,7 +41,7 @@ AddEventHandler('onResourceStart', function(resource)
 				GlobalState["PrisonLockdown"] = not GlobalState["PrisonLockdown"]
 				GlobalState["PrisonCellsLocked"] = GlobalState["PrisonLockdown"]
 				for i = 1, 27 do
-					exports['pulsar-doors']:SetLock(string.format("prison_cell_%s", i), GlobalState
+					exports.ox_doorlock:SetLock(string.format("pulsar_prison_cell_%s", i), GlobalState
 						["PrisonCellsLocked"])
 				end
 				exports['pulsar-hud']:Notification(source, "info",
@@ -60,7 +60,7 @@ AddEventHandler('onResourceStart', function(resource)
 			if char and (pState.onDuty == "prison" or pState.onDuty == "police") then
 				GlobalState["PrisonCellsLocked"] = not GlobalState["PrisonCellsLocked"]
 				for i = 1, 27 do
-					exports['pulsar-doors']:SetLock(string.format("prison_cell_%s", i), GlobalState
+					exports.ox_doorlock:SetLock(string.format("pulsar_prison_cell_%s", i), GlobalState
 						["PrisonCellsLocked"])
 				end
 				exports['pulsar-hud']:Notification(source, "info",
@@ -115,7 +115,7 @@ AddEventHandler('onResourceStart', function(resource)
 					local coords = GetEntityCoords(GetPlayerPed(data))
 					_swabCounter += 1
 
-					exports.ox_inventory:AddItem(char:GetData('SID'), 'evidence-dna', 1, {
+					exports.ox_inventory:AddItem(source, 'evidence-dna', 1, {
 						EvidenceType = 'blood',
 						EvidenceId = string.format('%s-%s', os.date('%d%m%y-%H%M%S', os.time()), 950000 + _swabCounter),
 						EvidenceCoords = { x = coords.x, y = coords.y, z = coords.z },
